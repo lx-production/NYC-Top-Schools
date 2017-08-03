@@ -1,7 +1,7 @@
 // Getting schools' names and lat, long coordinates from Google's JSONs
 var locations = [];
 $.getJSON('elementary-schools.json', function(data){
-  for (var i = 0; i < 5; i++) {  // Only using 5 schools
+  for (var i = 0; i < 6; i++) {  // Only using 6 schools
     var elemSchoolsObj = {};
     elemSchoolsObj.title = data.results[i].name;
     elemSchoolsObj.location = data.results[i].geometry.location;
@@ -9,7 +9,7 @@ $.getJSON('elementary-schools.json', function(data){
   }
 });
 $.getJSON('middle-schools.json', function(data){
-  for (var i = 0; i < 5; i++) {
+  for (var i = 0; i < 6; i++) {
     var midSchoolsObj = {};
     midSchoolsObj.title = data.results[i].name;
     midSchoolsObj.location = data.results[i].geometry.location;
@@ -17,7 +17,7 @@ $.getJSON('middle-schools.json', function(data){
   }
 });
 $.getJSON('high-schools.json', function(data){
-  for (var i = 0; i < 5; i++) {
+  for (var i = 0; i < 6; i++) {
     var hiSchoolsObj = {};
     hiSchoolsObj.title = data.results[i].name;
     hiSchoolsObj.location = data.results[i].geometry.location;
@@ -25,7 +25,7 @@ $.getJSON('high-schools.json', function(data){
   }
 });
 $.getJSON('colleges.json', function(data){
-  for (var i = 0; i < 5; i++) {
+  for (var i = 0; i < 6; i++) {
     var collegesObj = {};
     collegesObj.title = data.results[i].name;
     collegesObj.location = data.results[i].geometry.location;
@@ -68,6 +68,7 @@ function initMap() {
   searchBox.setBounds(map.getBounds());
 
   var largeInfowindow = new google.maps.InfoWindow();
+
   // Initialize the drawing manager.
   var drawingManager = new google.maps.drawing.DrawingManager({
     drawingMode: google.maps.drawing.OverlayType.POLYGON,
@@ -86,35 +87,10 @@ function initMap() {
   // mouses over the marker.
   var highlightedIcon = makeMarkerIcon('ff2b2b');
 
-  // The following group uses the location array to create an array of markers on initialize.
-  for (var i = 0; i < locations.length; i++) {
-    // Get the position from the location array.
-    var position = locations[i].location;
-    var title = locations[i].title;
-    // Create a marker per location, and put into markers array.
-    var marker = new google.maps.Marker({
-      position: position,
-      title: title,
-      animation: google.maps.Animation.DROP,
-      icon: defaultIcon,
-      id: i
-    });
-    // Push the marker to our array of markers.
-    markers.push(marker);
-    // Create an onclick event to open the large infowindow at each marker.
-    marker.addListener('click', function() {
-      populateInfoWindow(this, largeInfowindow);
-    });
-    // Two event listeners - one for mouseover, one for mouseout,
-    // to change the colors back and forth.
-    marker.addListener('mouseover', function() {
-      this.setIcon(highlightedIcon);
-    });
-    marker.addListener('mouseout', function() {
-      this.setIcon(defaultIcon);
-    });
-  }
+
   document.getElementById('show-listings').addEventListener('click', showListings);
+  // $('#show-listings').click(showListings);
+
   document.getElementById('hide-listings').addEventListener('click', function() {
     hideMarkers(markers);
   });
