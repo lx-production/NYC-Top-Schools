@@ -1,0 +1,536 @@
+{
+    "html_attributions": [],
+    "results": [
+        {
+            "geometry": {
+                "location": {
+                    "lat": 33.7059065,
+                    "lng": -117.7926475
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 33.7075029302915,
+                        "lng": -117.7910290197085
+                    },
+                    "southwest": {
+                        "lat": 33.7048049697085,
+                        "lng": -117.7937269802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+            "id": "e1320d238ce0d547cec37ab8c2ca1a7c3cc09454",
+            "name": "College Park Elementary School",
+            "place_id": "ChIJWwvBe2fc3IARDPxUZlQUmLI",
+            "rating": 4.2,
+            "reference": "CmRSAAAAnH7u7pYa4Y2xa1Tynb3JyYr3Q9kZ2tU2B2EDJEgYyIjZQICfEoZBPv9X5nMgYE6NWnbx8sMHsLqYUk5XUSktSr7hnflvnT7zjjx7Ij-tsiPSlLQLEd1cfoBwHQrbwxn_EhCxwvUe7yIEthxPNv0RYMqTGhRVuT_ia05JGbP8YvRtnUPXfhepYQ",
+            "scope": "GOOGLE",
+            "types": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "3700 Chaparral Avenue, Irvine"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 33.66136660000001,
+                    "lng": -117.9107683
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 33.66265463029151,
+                        "lng": -117.9098016197085
+                    },
+                    "southwest": {
+                        "lat": 33.65995666970851,
+                        "lng": -117.9124995802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+            "id": "a8217a4c1b34a87e552ee72c86864b9406942bd5",
+            "name": "College Park Elementary School",
+            "photos": [
+                {
+                    "height": 432,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/115954532991220457546/photos\">Der Fürher</a>"
+                    ],
+                    "photo_reference": "CmRZAAAAa7o-R6sIH99shORocy4Rdk0yU5JEr89VomVJBHmLyFelwR2jZe41978WjAvFfIc8HI9uARxsVCfkAj4P-glY1ix3GITFjSSHt3_UCI1JUcpL-hYbNkAIDnv-XDXyqFgDEhATKnntOGomCkZ2c79TB5lbGhSEluXqzyORC-gc5h5dByvFq1yeSw",
+                    "width": 576
+                }
+            ],
+            "place_id": "ChIJqemm33bf3IARFdFZrJxugYw",
+            "rating": 4.9,
+            "reference": "CmRSAAAA6arXJNErPeeaPgXKX1mXUyncymgwHS1Iww-e_mzmfmE12DfKoc95uwgjSTf1JGWvooPnfeiIn6nIphHjqd8PRrx2MV--BbTMbJb-lO0bk2PN2qS3vzpq6iaK51NYVqoGEhC-L0mB1CPQSyhi6RQ4xl4iGhTK4P027L8kVI-z1_f73TCLcVX-Ow",
+            "scope": "GOOGLE",
+            "types": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "2380 Notre Dame Road, Costa Mesa"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 33.775768,
+                    "lng": -117.861362
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 33.77750398029151,
+                        "lng": -117.8600102697085
+                    },
+                    "southwest": {
+                        "lat": 33.77480601970851,
+                        "lng": -117.8627082302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+            "id": "8f64c9cca891f699159df4ee219cadb51e918cd1",
+            "name": "CNI College",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 432,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/115442616748030945012/photos\">CNI College</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAUjf_82aynV3p4RmYX8h38543XeaYgtpNfi2spgYQr1lWfRKS2XEYPx0aBGlMZ9cddMvEH4mmuK4imoZ6At1N0h8QrSd4X3GV1DbNdRYo5DBAJOEIIa1uwVRBd0xsg-3FEhBkZUXeJ30idRQhsADGABGgGhSNUm-e-TmXn9_Ky0HM7Oa305azFw",
+                    "width": 960
+                }
+            ],
+            "place_id": "ChIJwzRLgMbZ3IARnjapJDvHb5I",
+            "rating": 3.8,
+            "reference": "CmRSAAAAGEQjEOIg-mKpnz89HbxwgwDbLJtUUiNlrziEaJerR6W_NACBGv0BySSxDjBQ4zfrPfsHFJ4egKdpuEgeDA1GS8neBoE-NktNaBH7g5goOEpwum_R0wA_nqsaVe5ln8iWEhCAadW1fRD6x99wAuT5w4CjGhSNMoMwta45BQoYaZIpnPXaIabjeQ",
+            "scope": "GOOGLE",
+            "types": [
+                "school",
+                "health",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "702 Town and Country Road, Orange"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 33.68062399999999,
+                    "lng": -117.927832
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 33.6815518302915,
+                        "lng": -117.9268904197085
+                    },
+                    "southwest": {
+                        "lat": 33.6788538697085,
+                        "lng": -117.9295883802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+            "id": "f8fd95cc59e1061f4c33832edbe51f23ef6e0675",
+            "name": "Early College High School",
+            "photos": [
+                {
+                    "height": 2069,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/101892564382059620359/photos\">diane</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAhnyhkG2a4XANyFsgNiREen1hM1DVdNn3pb2T-FwjD1p_cOsCNDsW2R_i_nuj8UvzzH2o12sC16IRmbZHutRt-cgfn_my-2w1RZdsw_ciytQQuA1W2f0Aq6NQB_QfVnJaEhCpfFbxkJjiwYLlwgfUK7nZGhRhzORVQQDmtVuHJwaKs8b5o7x5mw",
+                    "width": 2689
+                }
+            ],
+            "place_id": "ChIJ6T0PAqcg3YAR722k8LNNJ-s",
+            "rating": 4.2,
+            "reference": "CmRSAAAAYCDLkL_kNEUoSzGpDV3K0FkoOZP_7rDaG4Xi6a7yy4pN73QYcG5TfhAjLznOPYAXEaxyjE6nJ6gujGC12vLXHQsseWGqUPoYMuJ--fGhpxx_CPsGXN_b9iYKvDiTK1ckEhCXHDN2Lp7DhQYYqetdBgKCGhTMtpXOSzo958uSXb6j9Mp2FusJbg",
+            "scope": "GOOGLE",
+            "types": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "2990 Mesa Verde Drive East, Costa Mesa"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 33.7588483,
+                    "lng": -117.8893948
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 33.7607592302915,
+                        "lng": -117.8880588197085
+                    },
+                    "southwest": {
+                        "lat": 33.7580612697085,
+                        "lng": -117.8907567802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+            "id": "aa4ced2d6394a01d8a147e457203269982bbbd81",
+            "name": "Middle College High School",
+            "place_id": "ChIJP3g_Sk_Y3IARhRB4DKxwRgY",
+            "rating": 4.5,
+            "reference": "CmRRAAAAkjM2zPQSbFal6QG2iFNs-rw7vLCmN0K6r_VohJBFMV-oEHC0ze9YwF2tEDN5VDGBU3dZ_1iNaLsu0NAZOSe5Y-99b2qBZZvxk7pGL16RxpNawlfymka2PjYujWFbPtlGEhCrdyeEI6Ih18_G1XuGymjAGhSMxO9PKG787vLM6CTzS5cRiPSEYw",
+            "scope": "GOOGLE",
+            "types": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "1530 West 17th Street, Santa Ana"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 33.680036,
+                    "lng": -117.873205
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 33.6814968302915,
+                        "lng": -117.8720141197085
+                    },
+                    "southwest": {
+                        "lat": 33.6787988697085,
+                        "lng": -117.8747120802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+            "id": "f7199a6b88ad84d999e41753de8bcdc46b7503e0",
+            "name": "Pacific College",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 375,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/109398628943134942626/photos\">Pacific College</a>"
+                    ],
+                    "photo_reference": "CmRaAAAApuI0GB-rYdiviYDqKPkT90loJkzX6f9qDi_8mGATXzpRy3KaYY0CVDWPMfLGoHVjrRKaLujVOnJsZu86GBTU6l0bu117stvKnutO3kOfTt7j73YXNGBQO8cxUc2NQiimEhB6yBkT9z0cFMQ3_L3J__KvGhRaJMy4CnwJNLDtkwUpUu8CELDqTw",
+                    "width": 500
+                }
+            ],
+            "place_id": "ChIJkfsRk-Pe3IARTU-ShTgTWDo",
+            "rating": 2.9,
+            "reference": "CmRRAAAAaSRI8zVbrULGKtXxR0_f3cZZkJUGUms26Jhpuh5Jrbn-5F18Avm-JmdddcgHAH4_6nuuD2WhUjcLKErHewHXczY0wnyLqJlo9yPpX3IybmLSKswNzhebJcaUqB6Or2pQEhCnyeNEjyV5S1q-HniNPHa9GhQ8JvD47pEEsdotggGXl8zXuqc4qg",
+            "scope": "GOOGLE",
+            "types": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "3160 Red Hill Avenue, Costa Mesa"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 33.759039,
+                    "lng": -117.8779926
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 33.7608520802915,
+                        "lng": -117.8766532697085
+                    },
+                    "southwest": {
+                        "lat": 33.7581541197085,
+                        "lng": -117.8793512302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+            "id": "e62fbbb07c65097acb484652294d3c5b1c826912",
+            "name": "USC College Prep, Santa Ana",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "place_id": "ChIJJaBlLE3Y3IARIJknNamHcX4",
+            "rating": 5,
+            "reference": "CmRRAAAA-W7r30g-rScIrtjx7-tSr_SfHoXPEMtCJTtgA-7mmz7tTIqK0UqRjcNxYDpzRNoU_7p7nLgFpbwVSX1VgPFi4YxFARCxkRL-7f4ZGgvGj-aHRQ9iQ-dAya70bMWJmTlQEhA0axZwf5LdZIrEbKO9UYJwGhQ_28oMhPtMJoHqW4Vl8Aaz_Wykig",
+            "scope": "GOOGLE",
+            "types": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "1010 West 17th Street, Santa Ana"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 33.77465300000001,
+                    "lng": -117.938256
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 33.7760019802915,
+                        "lng": -117.9367797697085
+                    },
+                    "southwest": {
+                        "lat": 33.7733040197085,
+                        "lng": -117.9394777302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+            "id": "d852acf651b09ae2b0a06456f28e83c9525fdbe3",
+            "name": "Concorde Career College - Garden Grove",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 710,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/104398099469476310029/photos\">TheCHIEF BIGFAITH</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAHheVDMSi2X0ckfqmjxMohQpjgwXL-SehE2xc7O9AbfrV-z17b9c1IUukdPdqjxaaIC27y_G4H9liCaVeTzqbJ5g0AthKiMOzMg7uE_iTg1-gypf8x52i5TfQAY16ETraEhDJ_43DgKlYtwpfY7nprPLIGhTkCJvnHFnuuqI9rdIUQ9hwwciEAw",
+                    "width": 960
+                }
+            ],
+            "place_id": "ChIJK8S4Pggo3YARzxt6nU08Mqc",
+            "rating": 3.2,
+            "reference": "CmRSAAAA_WOzO8gpa11hq189nLj05OHw47dTsEsD3yVOQ51S1KNrsVS7ISsC5c6e7Xlput5ClBkTh3cjb01_0fdtwyaDXqXc8lXVcNlgGvmOu1xTWE1NhJ8_1UbZca_0NUupmy7MEhAZEILcVhrl1OtwrmUZhaPSGhTnO1PhjzDbUrkZUXj1gqwAhrn7Hw",
+            "scope": "GOOGLE",
+            "types": [
+                "school",
+                "health",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "12951 Euclid Street, Garden Grove"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 33.6824209,
+                    "lng": -117.8069564
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 33.68396448029149,
+                        "lng": -117.8054112197085
+                    },
+                    "southwest": {
+                        "lat": 33.68126651970849,
+                        "lng": -117.8081091802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+            "id": "bcf7603cd5e8fd56f39e34653029501d0a066540",
+            "name": "AOI College of Languages",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 1936,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/111988139463991384969/photos\">AOI College of Languages</a>"
+                    ],
+                    "photo_reference": "CmRaAAAA7NcSeH3m-qkym490hLJMOkLfonGNy2D0DId_3DyuPARWx1lwidby5JKfwrlsvLZ-fBz55R1_V54pgTKd03nQoLRr89gcb44Xxo6TutgeNRlzI9R4gxN1l6V6gUqnMfUnEhA8jabKIbN-GQ3aYT-wXixKGhRXrJQCmCIJookZoGlqKbCYK_X8Jg",
+                    "width": 2592
+                }
+            ],
+            "place_id": "ChIJiTQFrkrc3IARChECDiPDKt8",
+            "rating": 5,
+            "reference": "CmRSAAAAZss--DJScOrf1w8b6cAYXnOuZUnH3-80l9n1uhw8sN_6G0jIfNwy2FB5-24yt1zXonmSr4xIIMRF-oKDwX7z_mjVtyBqgCvBVbL0UjDCAgzQjP1dtw6ZQh1-Ov6h281jEhBYmwmx09MBQrOIL9I2mFG3GhSF0K1MUZTjtq71hrWWjKk7m0QDsQ",
+            "scope": "GOOGLE",
+            "types": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "4040 Barranca Parkway #290, Irvine"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 33.795465,
+                    "lng": -117.882292
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 33.79707528029149,
+                        "lng": -117.8808473697085
+                    },
+                    "southwest": {
+                        "lat": 33.7943773197085,
+                        "lng": -117.8835453302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+            "id": "5d60268be156c56078caafbe5dfc66f312304ca1",
+            "name": "U.S. Colleges - Anaheim",
+            "place_id": "ChIJpdg5I5ed4RQR_g8biHQ5aHI",
+            "rating": 3,
+            "reference": "CmRRAAAAxwleMgyvkRQ2XHPONiSIQcgBSCMCDrUZna0RfTr4c8QWvWw5h9UmcYXBSFaxFTClJEm3FIW7uEj4WglogC858Nr5FtgDgNO7nnhZ2Gl-TXFVJ6rnTowi9O_GSFWU_RgdEhCzksUlyQDYbWgAY-QS2zWBGhT1YyNDTkgmDcSMzMsu7GkbRMWo3Q",
+            "scope": "GOOGLE",
+            "types": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "2390 East Orangewood Avenue #200, Anaheim"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 33.7593657,
+                    "lng": -117.886616
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 33.76101163029151,
+                        "lng": -117.8852689197085
+                    },
+                    "southwest": {
+                        "lat": 33.75831366970851,
+                        "lng": -117.8879668802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+            "id": "56191217a269177b75f4ddd190174477a63e4c1d",
+            "name": "Santa Ana College Child Development Center",
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/107186172656415192355/photos\">Adam Worachek</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAZVq3CSGxJkMGOa1yjw06EA-wvMtaNU-OfSrSbIvmPouG3UR0b_4dqBufjwiFeeVETPNIv87zwU650o18AD92jdPiOW93FtcW4foRYpHhNOnXZ3R2OCYJip7fXlfPJiZbEhB9gVQoIud1VSvfRbuyTWKLGhQJZJy-eBPDCLvFQHspRnezA5A64A",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJ-8CP1kXY3IARgVyqf0vpxZU",
+            "rating": 5,
+            "reference": "CmRSAAAAsuQra7DiRDWp3iXkHcM0ZBlDTjKAkWo-NE37ef4PaXt6D1zYdyeITaY3gtCEWMh9_MRDakH7Ur3SCm0-ZHNYcn-_8luRRjxqnHuQhQPrY7g7pbl3lFutsd_Tynm1G30GEhAVvOxEt8ZLqTZXh9IXrVAtGhTNzV3CuqTK2cI4i2_4zrSSJdruGg",
+            "scope": "GOOGLE",
+            "types": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "1530 West 17th Street V100, Santa Ana"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 33.8145085,
+                    "lng": -117.9062731
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 33.8158032302915,
+                        "lng": -117.9051480197085
+                    },
+                    "southwest": {
+                        "lat": 33.8131052697085,
+                        "lng": -117.9078459802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+            "id": "64a0b3658fd27d32d2d327e6f59224add7286c13",
+            "name": "Summit Career College - Anaheim Campus",
+            "place_id": "ChIJHSXMwsjX3IARPS8142PPVk4",
+            "reference": "CmRRAAAADYZMMaYQUfTu4IQRxmurWXaPWDiKM2RsTPwQB4V2zUWu1gEJ80wQ5Y3jz4vnDSUzyJtngLw1wRZdkt1Co7R9RBpZ0lMbU192YJZt0p-SvEyYq5OTXxDosXJ7E4RW2JNrEhBsKICQdzxlKoi7zmvqyBUYGhQ-b8GKEM_n5zKxwSLhg_4l4wbk9g",
+            "scope": "GOOGLE",
+            "types": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "1360 South Anaheim Boulevard, Anaheim"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 33.69505069999999,
+                    "lng": -117.91847
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 33.69639203029149,
+                        "lng": -117.9175849697085
+                    },
+                    "southwest": {
+                        "lat": 33.69369406970849,
+                        "lng": -117.9202829302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+            "id": "0685d642459b81a18b210a6f547f384776c18bae",
+            "name": "WestMed College - Costa Mesa, California",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "place_id": "ChIJfy5XXVPf3IARl8ax_86NxS0",
+            "reference": "CmRRAAAApI1PFfFwGZuGQHEEdDzbSq-Ii6UFh48JblHM6FtZN83LYfNhsMNx9jXnT2FkSXmlDuXtdt75Puxbqs495B4Ypggp073OQwrF6nK0mzgJf9TN6onFOxOTd12iXaDOmWG3EhAQveIGmcT0EoufJa3Nj3aoGhQeJM7ZxuSDmilOzr_wTRgTra3vAg",
+            "scope": "GOOGLE",
+            "types": [
+                "university",
+                "school",
+                "health",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "3390 Harbor Boulevard, Costa Mesa"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 33.6997984,
+                    "lng": -117.9110039
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 33.70137578029149,
+                        "lng": -117.9095033697085
+                    },
+                    "southwest": {
+                        "lat": 33.69867781970849,
+                        "lng": -117.9122013302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+            "id": "980b27d68a21280d1166d2671c006685d9de4e60",
+            "name": "College of Automotive Management",
+            "place_id": "ChIJKy4757LY3IAR1dwzusr7KII",
+            "rating": 4.8,
+            "reference": "CmRSAAAAyijZdl4Ei8C1hJ_rL2lrN2__fkQCCmcicfzLgI8mCW17Y8-ikPGCiJ5E3SzoApurlB8ze_9C70_TMsar8PHOfM6QcH26hpzBQAYkcmSzvnkJ9gRJIMAnx1S06i4wy348EhASZyLYtAsRvS3rl_wuW5qOGhTIzBb1DhjU5VgLcZ9FOWklAPrBhw",
+            "scope": "GOOGLE",
+            "types": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "3000 West Macarthur Boulevard, Santa Ana"
+        }
+    ],
+    "status": "OK"
+}
