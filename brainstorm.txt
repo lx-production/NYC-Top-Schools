@@ -1,7 +1,9 @@
 - array of locations
-  - elementary schools: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=33.745472,-117.867653&radius=5000&type=school&keyword=elementary&key=AIzaSyAGHLbKTx0QeaOW2bmQZLUIP1r9v_ROgC8
-  - middle schools: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=33.745472,-117.867653&radius=5000&type=school&keyword=middle-school&key=AIzaSyAGHLbKTx0QeaOW2bmQZLUIP1r9v_ROgC8
-  - high schools: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=33.745472,-117.867653&radius=5000&type=school&keyword=high-school&key=AIzaSyAGHLbKTx0QeaOW2bmQZLUIP1r9v_ROgC8
-  - college: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=33.745472,-117.867653&radius=5000&type=school&keyword=college&key=AIzaSyAGHLbKTx0QeaOW2bmQZLUIP1r9v_ROgC8
+  - elementary schools: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.748441,-73.985664&radius=5000&type=school&keyword=elementary&key=AIzaSyAGHLbKTx0QeaOW2bmQZLUIP1r9v_ROgC8
+  - middle schools: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.748441,-73.985664&radius=5000&type=school&keyword=middle-school&key=AIzaSyAGHLbKTx0QeaOW2bmQZLUIP1r9v_ROgC8
+  - high schools: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.748441,-73.985664&radius=5000&type=school&keyword=high-school&key=AIzaSyAGHLbKTx0QeaOW2bmQZLUIP1r9v_ROgC8
+  - college: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.748441,-73.985664&radius=5000&type=school&keyword=college&key=AIzaSyAGHLbKTx0QeaOW2bmQZLUIP1r9v_ROgC8
 
 - filter
+
+40.748441,-73.985664

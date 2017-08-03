@@ -1,716 +1,772 @@
 {
     "html_attributions": [],
-    "next_page_token": "CpQCDQEAAJ7whuR-AhBIxcw3d-g0-596ajrAlAgsm4yPC3zWTuqyCDWeHsfpouPOMiRt0sOsaE-lJxigBWhHD7G85FoldKvO4DoFELb0ZqBe84yeo3n03MCZBJTiW7wvOWxEe3CmG9MxPOZLW11PHgx1GHPqNLlsMXJpBVjCABB6ndkly2xGVKLjn_7WQF2qp7dPdIFSq0zcT4-Q6PVmFUAZHR0chZOicyEP8CWV0oTQ50_9xdLhWeeCJN8jk3nM9iE3sPQnP2KybRQLH32L2DUc953uVj6b6GO3k_3e4JmC9gSFeu_35nRu9eDAMhjk8XqJXYNnfM-t1kYK5fOr814sfHOyBk5SWQ8y7DSdSXwKfGE6LTzAEhAvhPzSPpVYGwgJTVLXWdaVGhS5R_0a2cCW06r8tYUgVn-0We9cSQ",
+    "next_page_token": "CpQCDQEAAAW1gThpmfK7wDjTnxkpF_jJKlxTe19O2Xhy_w_QGvtM20tVdSmzZx7kaoSpSDO0Or2PpXz-c_LlE3wni1hBBLajvutKMFQPhVMls7rOI-iCgp6ZLdnl0g5KABZvlrvXdDwohE7ovqnDIb-Gtcpjiwbo5uBatUiDOIwUBuP1mt3X7uw_tnMQ8fdE9DLjirH4s3Nmo8msn2XWKkO0_fgv7k0TUFpYMNxYHhPf_mzOHv3ZEfCIJVH389I3Y4W4LtPAbSqbVieN3LtDMKEatdYhZa6WeCaYEIiMprSUrfLuwT9fgtHIyDGtS4uwmM6A2XS78g0P72UblcrXX1ZnRSl0fK-6xy-2o7_lhUAlpRmzIi0gEhALziBbeBQBFYGblBba3J1oGhQC77XJBNG7MNglozsCojx0YW7zPg",
     "results": [
         {
             "geometry": {
                 "location": {
-                    "lat": 33.7445919,
-                    "lng": -117.871714
+                    "lat": 40.78553969999999,
+                    "lng": -73.9536897
                 },
                 "viewport": {
                     "northeast": {
-                        "lat": 33.7458429802915,
-                        "lng": -117.8703628697085
+                        "lat": 40.7868091802915,
+                        "lng": -73.95239936970849
                     },
                     "southwest": {
-                        "lat": 33.74314501970851,
-                        "lng": -117.8730608302915
+                        "lat": 40.7841112197085,
+                        "lng": -73.95509733029151
                     }
                 }
             },
             "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
-            "id": "772451a48fd50ee3513839575b7f7aad7c008972",
-            "name": "Martin R. Heninger Elementary School",
-            "place_id": "ChIJcaAWsQbZ3IAR_NPWNrn99I4",
-            "rating": 4.6,
-            "reference": "CmRSAAAA51S8rEiERl8-4pGUgOt5TQ2-qh9XmX0Ut-22rT2zPLoJjYFcmHuxxh0DnhZ1wcc3SXIbcgsZTsxiT757vsNt-0z3yE1QtzEkVp56pMT9M7O90DsIsw2BWEXWCyrb_-MCEhAMGCN_W1oyJx8w4UPiyjK5GhRjl4TQ7YGOdinhc-XxWMVQdcj6qQ",
-            "scope": "GOOGLE",
-            "types": [
-                "school",
-                "point_of_interest",
-                "establishment"
-            ],
-            "vicinity": "417 West Walnut Street, Santa Ana"
-        },
-        {
-            "geometry": {
-                "location": {
-                    "lat": 33.7518695,
-                    "lng": -117.8809194
-                },
-                "viewport": {
-                    "northeast": {
-                        "lat": 33.7530403302915,
-                        "lng": -117.8795662697085
-                    },
-                    "southwest": {
-                        "lat": 33.75034236970851,
-                        "lng": -117.8822642302915
-                    }
-                }
-            },
-            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
-            "id": "7eb3406d855612f9bb13b54851141f159ae809de",
-            "name": "Heroes Elementary School",
-            "place_id": "ChIJnb94gFTY3IARsi17uUR5Wcs",
-            "rating": 4.6,
-            "reference": "CmRSAAAABEceQAheK5mQ7iIZOhiDi9JVyLy3CMZDm3QdfEN_VXsT9ep0dMqp8X0wano1leFBvzOd3ZK7w2wQ4RI1TWrQghdIsAIly0r1L29guRNO7TgvN4p2MlD0Dh9P7_p8TrJHEhAm45HGOrexvCkIRm2FswblGhRSP_Wd2B1EvyrfrJ5QDD1_r9hGOA",
-            "scope": "GOOGLE",
-            "types": [
-                "school",
-                "point_of_interest",
-                "establishment"
-            ],
-            "vicinity": "1111 West Civic Center Drive, Santa Ana"
-        },
-        {
-            "geometry": {
-                "location": {
-                    "lat": 33.7822931,
-                    "lng": -117.9010534
-                },
-                "viewport": {
-                    "northeast": {
-                        "lat": 33.7833552802915,
-                        "lng": -117.8997049197085
-                    },
-                    "southwest": {
-                        "lat": 33.7806573197085,
-                        "lng": -117.9024028802915
-                    }
-                }
-            },
-            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
-            "id": "31c66f49965394e32cc56739f18c15d1bd4e4f1a",
-            "name": "Lampson Elementary School",
+            "id": "4595977bb9cf854d103fdfb79c7bca799e7a0ce4",
+            "name": "Hunter College Elementary School",
             "photos": [
                 {
-                    "height": 1944,
+                    "height": 500,
                     "html_attributions": [
-                        "<a href=\"https://maps.google.com/maps/contrib/106748045805847449396/photos\">Razzeh N Liliana</a>"
+                        "<a href=\"https://maps.google.com/maps/contrib/100883441574956165356/photos\">Michael Jacome</a>"
                     ],
-                    "photo_reference": "CmRaAAAAehin-4Jeg_GEpVC7smUdphMNd068wiOHh3GfjCpPYq-bxghbC65cYHMuMTs-l-xp_Q1m7qWv9HlCtB_oYPTQBB2ABakWSAGp8OsO4ZQgADIWaf2ZeyxIRFI1xORt_PktEhAgcuV58Yj8yKq9VquL3QN7GhRfBZNrE3RV-A0mF1agmsan5c6XIQ",
-                    "width": 2896
+                    "photo_reference": "CmRaAAAAaFT7gv6BBMYYCqi0ymPnf4cEd0DXafX92fSYEJSy5yvHmqxTf6GECZtsgK8lrzLLe5jY6yyjqfVSYZuNWLl0P29KF-DSvUodtXUEgS6LWZlz1mfsJ5n0pjfCjyE4nL0UEhAP43dLIBNjdT6iPLm0YI8xGhSR775pqgo_aLWXV31sk6a7X2y7ag",
+                    "width": 500
                 }
             ],
-            "place_id": "ChIJcZ7_p4rX3IAR9b7UYpaPaB0",
+            "place_id": "ChIJD9BtWKFYwokRoKy0eddDv2U",
             "rating": 4.3,
-            "reference": "CmRRAAAAPgrjQDhfFtxKGim8AQeq4yO5gTrlFKj9CoaGJWAMr6hRswiDwKJ6ax-62eaaKH5wRHf2UIhJDeasBisMxNKL56XJmjLfdayJL0f5joHiTRKxe9d4O0-PceS-mHKT0YLhEhAC0qX_Xm2yA-ahsh0txSL3GhRdmxoCG2JcYsCXTIhmZc_Tx7YFRQ",
+            "reference": "CmRRAAAAZWwWLXZdOmXS_rvKt6TKtbqbMYgCtk2dvf2Gs2ac75f26FiFBZ4AUWVva2MGP8DGjedO02ru15TL7rrCkVdGbCsS0KPXH-GAl_LFY2zRkwlAYbAF0qsTs2hgM_rWpA4uEhAwesCLgLiMFeGKiekQckbYGhTdacxKPK_YYjIfI9COfYDbcLdgkA",
             "scope": "GOOGLE",
             "types": [
                 "school",
                 "point_of_interest",
                 "establishment"
             ],
-            "vicinity": "13321 Lampson Avenue, Garden Grove"
+            "vicinity": "71 East 94th Street, New York"
         },
         {
             "geometry": {
                 "location": {
-                    "lat": 33.7496949,
-                    "lng": -117.8271131
+                    "lat": 40.7563069,
+                    "lng": -74.0418426
                 },
                 "viewport": {
                     "northeast": {
-                        "lat": 33.7510479802915,
-                        "lng": -117.8251172697085
+                        "lat": 40.7575861302915,
+                        "lng": -74.04030236970848
                     },
                     "southwest": {
-                        "lat": 33.7483500197085,
-                        "lng": -117.8278152302915
+                        "lat": 40.7548881697085,
+                        "lng": -74.04300033029151
                     }
                 }
             },
             "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
-            "id": "c13e79135fd1b385bae69a66f877355ecb4daff0",
-            "name": "Helen Estock Elementary School",
-            "place_id": "ChIJmY92WNfb3IARzOmLi7r65nY",
+            "id": "c50e2919732f30067ce4a882add2950d260f80bd",
+            "name": "Thomas A. Edison Elementary School",
+            "opening_hours": {
+                "open_now": false,
+                "weekday_text": []
+            },
+            "place_id": "ChIJ9bpkgHpXwokRS9DAY1rmj2s",
             "rating": 4.3,
-            "reference": "CmRRAAAA1wWKUYoroCPdbnS5GAKmNqzfBuV2iOgqrDdGyWjkDgNnegL5btuoFFiQCS1YM-1NfmXqtuldnIYuW8B1zriQWrBSZDsMeiQH4onSSzsHsAWc6ZADQihCG7gio8mQ8FS4EhDpxaUtOaJN3VoDaNr4gYPYGhT0JQHpGbbv5LdJ5haPzD488rRR8Q",
+            "reference": "CmRRAAAAOA5TvYRHMhVk6Yt5iOpkzkekBDDRoZpYzBaPIlUskAnbHD5gzQSYToODYAoyGkA8V4SbU2eFyvd0cX1rU3DUtq6uNmaQAcP7xPeP2L_snuY8o6eXDNIUtts4ZL5UkVewEhBh9lpHW1t2-VDTeZIQqALgGhQtX3MwkvZC4uGzdm18yWIyUR8RYw",
             "scope": "GOOGLE",
             "types": [
                 "school",
                 "point_of_interest",
                 "establishment"
             ],
-            "vicinity": "14741 North B Street, Tustin"
+            "vicinity": "507 West Street, Union City"
         },
         {
             "geometry": {
                 "location": {
-                    "lat": 33.7653611,
-                    "lng": -117.8835707
+                    "lat": 40.75159980000001,
+                    "lng": -73.97002639999999
                 },
                 "viewport": {
                     "northeast": {
-                        "lat": 33.7667060802915,
-                        "lng": -117.8816564197085
+                        "lat": 40.7528804302915,
+                        "lng": -73.9687274697085
                     },
                     "southwest": {
-                        "lat": 33.76400811970851,
-                        "lng": -117.8843543802915
+                        "lat": 40.75018246970851,
+                        "lng": -73.9714254302915
                     }
                 }
             },
             "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
-            "id": "a527d0cfb5d90cb4569cafcdac788a9f1945278d",
-            "name": "Santiago Elementary School",
+            "id": "239bf145e5f34fa4dfa4c8442d871bc75fceeb3f",
+            "name": "Aaron School Elementary and Middle School",
             "photos": [
                 {
-                    "height": 320,
+                    "height": 437,
                     "html_attributions": [
-                        "<a href=\"https://maps.google.com/maps/contrib/110071050548391422835/photos\">Jasmine Cruz</a>"
+                        "<a href=\"https://maps.google.com/maps/contrib/114364047817763044032/photos\">Aaron School Elementary and Middle School</a>"
                     ],
-                    "photo_reference": "CmRaAAAABEjUMkYNo3GsHO196P0xgYPUGZfesFNmuB5yMwgQh9CvrQcRNtXjQ37fQwOLdud2f7KjoINqlx_ki1kKimvrDiK7fbHTIfWME44wQ7aqObNvdyq3LLpPhOmb2Kkyjw8pEhABQREf3xthgtgCSRbOL4ErGhTY66UTttLDYaPgpqXdAVYsBPdnRA",
-                    "width": 320
+                    "photo_reference": "CmRaAAAAyVTi96QI4MStPewVZ7yF9FrTvLZbtUpC6gjlRcfNsDSnFwizPROqd60z9O4I_k-Tt1F4nHx6GM7gtTth5Xmc9u2qhgDxEjBP2nV9AbE2GhqS1vXKjoR9XcOLptRQdSdEEhAPEpvnv-n01dlbsaPeaRRWGhReIMk6EhWSrI6qTCk5Ne6Rv1D6sQ",
+                    "width": 800
                 }
             ],
-            "place_id": "ChIJJxvzHErY3IARYXeOVBirGAc",
+            "place_id": "ChIJ_9qiPB1ZwokR6nM4dQ0A9Vk",
+            "rating": 3.4,
+            "reference": "CmRRAAAA5Ld4IrRBQMU6cGj0qF70UeUF1AfKODIEtcb15X_Hx4ovqz1F4Pz9QWwg7fO0AXEUQp5VZ0iiaJx2PXKrLPirc2TbMwGDpp5lZec4InQkyf2qgQp770hBFMNG20HajvdTEhDfm99DFQuUUK3fwnik8y4TGhTsZnus8YI-fyrVolPdGNM_KaS4bA",
+            "scope": "GOOGLE",
+            "types": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "309 East 45th Street, New York"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 40.714824,
+                    "lng": -74.03819899999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.7160510802915,
+                        "lng": -74.0368353197085
+                    },
+                    "southwest": {
+                        "lat": 40.7133531197085,
+                        "lng": -74.03953328029151
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+            "id": "e66df9302a7062f2d97694cf8efedda15d901c5c",
+            "name": "Cornelia F Bradford Elementary",
+            "place_id": "ChIJiSRtba9QwokRS_23HWb0FsE",
+            "rating": 4.2,
+            "reference": "CmRSAAAA1X0HyCwLDWtHkQZIZHRpDo142mnpB_wDuAnlSNqMPuedtnlH0fCW0zne3u_SAY44Bi-HW2_Hq1h_xyEoTYO403xE2t8CuxDx-Qi-d9wf9PZvR9B1N_uNE_-g1XKTLrq3EhCLr62bqS17tMVVyULhN1hAGhR338Hr9MfaDJGFfXw58q5CLicmiA",
+            "scope": "GOOGLE",
+            "types": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "96 Sussex Street, Jersey City"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 40.7888366,
+                    "lng": -74.0085947
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.79034298029149,
+                        "lng": -74.00740996970849
+                    },
+                    "southwest": {
+                        "lat": 40.78764501970849,
+                        "lng": -74.0101079302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+            "id": "791b8fc6636dae828ec870e19e463ffa7626e27a",
+            "name": "Harry L Bain School",
+            "photos": [
+                {
+                    "height": 1794,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/105170431124683218627/photos\">Marc Gonzalez</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAwWiRDnZwLRgfVbvKVzJRSyoZVLzXfZgxoPxY_bQqE7tOKuMIuKhjD8bwyIQrlyh-UODMITwSCB7XHPmVgiTlqsSgrTPEQTWv9sM-909OriEpCGO_35mS6UxT-Bh08uOUEhC9BE8jpLnWkQZlvwY73luSGhTjUH47-Tq_8P5-_AtRu3BTyTbVXA",
+                    "width": 2384
+                }
+            ],
+            "place_id": "ChIJhwoCZQ1YwokRu05z3OgzKLE",
+            "rating": 4.9,
+            "reference": "CmRSAAAAa7T3pU5NEHePhviOlVlK0hDR74dWhN7ZJ01xunMZxSR1A24B-SP_Y-Um8_Hg5x1kiILxtBq34kTny4sHZEHgqIjrrA17YCkWZH0cLgDtHEQxpDiJXN5GKoFwvUtjzqoSEhDLlfXd-_N6qAkaVuP61N2EGhRuZAENMRrrXI1Nt3f74HdMMOggtw",
+            "scope": "GOOGLE",
+            "types": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "6200 Broadway, West New York"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 40.791537,
+                    "lng": -74.0108437
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.79293943029149,
+                        "lng": -74.00961306970849
+                    },
+                    "southwest": {
+                        "lat": 40.79024146970849,
+                        "lng": -74.0123110302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+            "id": "110f2008c666b192bf92b53aba8b421c0c518c5e",
+            "name": "St. Joseph of the Palisades Elementary School",
+            "opening_hours": {
+                "open_now": false,
+                "weekday_text": []
+            },
+            "place_id": "ChIJYUVUNgxYwokR1rV3pmQHdP4",
+            "rating": 3,
+            "reference": "CmRSAAAACA4hA4RuXNrDXh3OmM8JaHQ1QLvY-epxLXbPFEktEHQvDkonMmwPDbNg9Qpwl9GH2UiDpwssiRlltdgrO7B9J5cA51ZjdYmvdXZUMv__YuOA-wLwEulzBy5DNS2e79DJEhBJMBKGICCjW-pUjwlgMB57GhRooiTwxPUxHPAJUit46GzSIkwWMw",
+            "scope": "GOOGLE",
+            "types": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "6408 Palisade Avenue, West New York"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 40.74055349999999,
+                    "lng": -74.039316
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.74193978029149,
+                        "lng": -74.0381564697085
+                    },
+                    "southwest": {
+                        "lat": 40.73924181970849,
+                        "lng": -74.04085443029152
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+            "id": "8f69955586042a25818421db8edae24d61660ee4",
+            "name": "T G Connors Elementary School",
+            "place_id": "ChIJtZ_N_FxXwokRMkDyjEV5kdo",
+            "rating": 4.2,
+            "reference": "CmRSAAAAnKm2YQ7GLpS89anlK1fOlG8Fkh4-DVRwD1SnLV8ea7dUUHE92VX176Co4lQY_tDvwHswRAMm1VaCvQcNJYTKCfS0djo4T0VWd_I8a_BLTBxKfdiguk28XUneyTmcEsHLEhCAT8_BQoehS606AzRDabPlGhTCT98HNvb2a_SI1eb18eBDqcoLSA",
+            "scope": "GOOGLE",
+            "types": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "201 Monroe Street, Hoboken"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 40.7809326,
+                    "lng": -73.9777228
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.7823783802915,
+                        "lng": -73.9763026697085
+                    },
+                    "southwest": {
+                        "lat": 40.77968041970851,
+                        "lng": -73.97900063029151
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+            "id": "06d1954faf38dc060420a9cd77f3fd68a5a4699e",
+            "name": "The Anderson School",
+            "opening_hours": {
+                "open_now": false,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2688,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/112166899108946868049/photos\">Evelyn</a>"
+                    ],
+                    "photo_reference": "CmRaAAAA7SLtevb0aF5v3btUCoxQSAdoCqn3bBMAHxmg7mzcHPLaxadC_SC_LQFd2Z7kbPJ3Nv3Qp0JLY8cWdOVhsmz8JD1PZ-0-z9guMou8ew4tyWqt6jhuAlMSwUKpXl04KxnBEhDU8_Z3AgODNeUz4lpJPcacGhRI7Ngl-bLd8ZWxwNx7rYlQjCESCw",
+                    "width": 1520
+                }
+            ],
+            "place_id": "ChIJW0xKL4lYwokR33E27Qmk_JE",
             "rating": 4.4,
-            "reference": "CmRRAAAASomjoyGb5W28oiBYsq2O9NOpjMwir19Yw4ZjHR8ptKP5MoRgaGIseFXWKZHFvWI7CAiN_4JOHYmZ31lhrTTzDkVQKCCFjsslbtUb7ZW1DzrxeGI66EgFgpuOsmQizpJNEhBkN4wZGjdtaIJ_LjmxiQGCGhTz1Nx_sQ68reiCT2tKcgzSqKu4uA",
+            "reference": "CmRSAAAASMxAl-Lddjl4PXSWn31encPdCz5yNowJ4eiGmcc1NvTUjFd3R8cujSCz6TTw37goozuiQZgkrSRWxdnxhobZR2WbQtxV18Aa2jfuuDzMnptH3Z6kvaONH6nfYovWCkvoEhAe4eRnoaGi_FR4rtU71x98GhSGn9YbedVIi9w0CodO9hoK5i9t6g",
             "scope": "GOOGLE",
             "types": [
                 "school",
                 "point_of_interest",
                 "establishment"
             ],
-            "vicinity": "2212 North Baker Street, Santa Ana"
+            "vicinity": "100 West 77th Street, New York"
         },
         {
             "geometry": {
                 "location": {
-                    "lat": 33.7311048,
-                    "lng": -117.8202211
+                    "lat": 40.7278778,
+                    "lng": -74.0430045
                 },
                 "viewport": {
                     "northeast": {
-                        "lat": 33.7327685802915,
-                        "lng": -117.8185558697085
+                        "lat": 40.7292267802915,
+                        "lng": -74.0416555197085
                     },
                     "southwest": {
-                        "lat": 33.7300706197085,
-                        "lng": -117.8212538302915
+                        "lat": 40.72652881970851,
+                        "lng": -74.04435348029151
                     }
                 }
             },
             "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
-            "id": "ab4c579e1740081de119488aac55195b98f41f07",
-            "name": "Benjamin F. Beswick Elementary School",
-            "photos": [
-                {
-                    "height": 2448,
-                    "html_attributions": [
-                        "<a href=\"https://maps.google.com/maps/contrib/112302538602144536970/photos\">Mario Vicente</a>"
-                    ],
-                    "photo_reference": "CmRaAAAAvX7vbofaPHC81EQEOuOxH472GYwRiNUlkiZHldOjsPU0l5CPYGm_N84PxQvMRbQ3pYhJQIessf-MtPdKJ-hWr2NBhyJXNLFNFLhjIycbDSgxkPd79I_UHaN9XDqj7G4tEhCBHcshyBvujf45t4QFAFQJGhQz7Sv_5EnIhloLA3AbI4dkaR2IWw",
-                    "width": 3264
-                }
-            ],
-            "place_id": "ChIJJ6ORRuXb3IARI20mHAy5Ylw",
-            "rating": 4.6,
-            "reference": "CmRRAAAASmdMeYD8KVww_MZuqvNb7FOqVcH_VD7_QQzB8QAezg-e9X8QnAj4swpYONKzpxV7LpsAgZacOu0HvJNraLN2uz2CsyZ7tHLSxIAPHpC087PQ-x7c87Mt-tsfvdd4dCyTEhAAxUQlX8UjMPE8sqkGlsU9GhQ_DHtHXtERC4YrORyfbtHkXI7Qbw",
+            "id": "c7e73f46e8b00ac05aa1dae497b366a92ab0e4d0",
+            "name": "Rafael De J Cordero Number 37 Elementary School",
+            "place_id": "ChIJg5_cEE5XwokRroFDL3wqasg",
+            "rating": 4.4,
+            "reference": "CmRSAAAAMdOgzH5evWgxeeJ5T3Tek5gwA0rg0THHx5ct9NcQPEnG5QpkljC-HeLCV6ZgJ75LVLje3M22M3r8Kqg2imRmwFNUay6VxQQmwDIgShDPXfNa8hDVjS7bBQIHOOaEIi_nEhBB0pTA-ZvIRsGhzsCPpdApGhSOk0rh59gTDGs9Q8BG-9QdOmmb4w",
             "scope": "GOOGLE",
             "types": [
                 "school",
                 "point_of_interest",
                 "establishment"
             ],
-            "vicinity": "1362 Mitchell Avenue, Tustin"
+            "vicinity": "158 Erie Street, Jersey City"
         },
         {
             "geometry": {
                 "location": {
-                    "lat": 33.7247236,
-                    "lng": -117.8966479
+                    "lat": 40.7244039,
+                    "lng": -73.9863598
                 },
                 "viewport": {
                     "northeast": {
-                        "lat": 33.7260694302915,
-                        "lng": -117.89589095
+                        "lat": 40.72563813029149,
+                        "lng": -73.9850949697085
                     },
                     "southwest": {
-                        "lat": 33.7233714697085,
-                        "lng": -117.89891875
+                        "lat": 40.72294016970849,
+                        "lng": -73.9877929302915
                     }
                 }
             },
             "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
-            "id": "c83c6a8afc9dc678c33d5bdd72b618252d15beb7",
-            "name": "Carl Harvey Elementary School",
-            "photos": [
-                {
-                    "height": 720,
-                    "html_attributions": [
-                        "<a href=\"https://maps.google.com/maps/contrib/111405407796456786491/photos\">Bryan Lopez</a>"
-                    ],
-                    "photo_reference": "CmRaAAAAYcPqHiv7dwm5UlulkWI1ieE8V-gXbfyNONVLiSWBaHSAZ4oVNSSc8HQd1pPfplryuOrQEgJLmHwu5q7tIvM0Hx_rM3FbpSw0yt6KL4oN9l0lHFQedsNfULBHjtDY5ix9EhCBmgjn7i17CDvD_jfpw7AUGhTeqxBrDfy0acwQNaYtKlEh9I760w",
-                    "width": 1280
-                }
-            ],
-            "place_id": "ChIJi8oGpOvY3IARowxCyOUUDKI",
-            "rating": 3.5,
-            "reference": "CmRSAAAAttraksuN2t9-zOp1Gh_cKEltOtxeAuHtcWgg0EQIpeNqUOgbLQI211J-96FAvRQIsGZc6muJWeR_Ijw1KEs5FgIVVMN3ONYRjOzHtWMxPe7SsP9EOCF_n492iP5smA8zEhBQClwaURVW7_rETLig-vN4GhQUVj54_pox0FKsPtmpAQNla5643w",
+            "id": "aec452c198294e895ebe2d2238260e8adb42dda6",
+            "name": "Neighborhood School",
+            "place_id": "ChIJiZBn_YJZwokRNzquZHo8A34",
+            "rating": 4.3,
+            "reference": "CmRRAAAAXQk1wjCyxmBBozgSUKkDhNsCB6nxfExrd2WzW4DxgKgYhesUvILAMxulanWJ3Ur3A_mkHf5_bu427z8TXE2bp9OIqHvcBezdmsWOCdJfs1WNcZB6Vp2SKGyXMjaqsZJuEhB4ktNBzFMM7kALNuPgYPI5GhT4IbdkjqYRU5Qq29_EosEH5zqUYQ",
             "scope": "GOOGLE",
             "types": [
                 "school",
                 "point_of_interest",
                 "establishment"
             ],
-            "vicinity": "1635 South Center Street, Santa Ana"
+            "vicinity": "121 East 3rd Street, New York"
         },
         {
             "geometry": {
                 "location": {
-                    "lat": 33.7645539,
-                    "lng": -117.9127732
+                    "lat": 40.7615926,
+                    "lng": -73.9955896
                 },
                 "viewport": {
                     "northeast": {
-                        "lat": 33.7659056802915,
-                        "lng": -117.9108451697085
+                        "lat": 40.7628581302915,
+                        "lng": -73.99430206970848
                     },
                     "southwest": {
-                        "lat": 33.7632077197085,
-                        "lng": -117.9135431302915
+                        "lat": 40.7601601697085,
+                        "lng": -73.9970000302915
                     }
                 }
             },
             "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
-            "id": "918eeb3c309fdc5f88caec411c238966cc956ed9",
-            "name": "Clinton Elementary School",
+            "id": "76b4ccb8b3eadc28316914b5070b8c6df34672da",
+            "name": "The Elias Howe School",
             "photos": [
                 {
                     "height": 2340,
                     "html_attributions": [
-                        "<a href=\"https://maps.google.com/maps/contrib/111474775075782425337/photos\">jose alberto garcia nava</a>"
+                        "<a href=\"https://maps.google.com/maps/contrib/106885318692105197067/photos\">Peter Dob.</a>"
                     ],
-                    "photo_reference": "CmRaAAAABZMJILggLRMtuKKhXk4StrURcimDnT8h7C3OHUNFXkYWwDWTDQ_RyLyXD4MF1by9Vwr4EjsVhImQlrAVtVQoswOzSDIiQLCR0s2ybCfrRMeXVSpP-rnuW1kWwSIOEMTEEhBnyX5PIJ63pm2mMFwleE6UGhRA9vLS65_GHOQz0UJN3ktAX13XfQ",
+                    "photo_reference": "CmRaAAAADBvTkrKb3zNNGE4t4SNLWj4e_lNnTynB7fK9jyOlMdkZ0Ol_IB1T-r6psCEuaad9E53oNFOdhKsvMxRLEPW1umslDB-p-nHzikTo9E_HcX8cAX8nN0SjEC3-hRllL_8NEhCoOAVg-aSWopP17iKNIm4SGhRHHFftX4T2N4Hvlp4k8fhsOorHZQ",
                     "width": 4160
                 }
             ],
-            "place_id": "ChIJzfOg-BHY3IARsMXGIj34e1Q",
-            "rating": 4.2,
-            "reference": "CmRRAAAAeskYb2WKkGZziqohDku7hWPN0vtbV2CEswt6K-Lz_9L3N9hqf6rnmg-x-N2SQFVLCM5zNwYhzQtS7q70B4OxjoJG4dTCfcZGhofYWsss9Cb60rOcNjlflknz4spkQwaEEhAwU954uMYjhb794PhIYkptGhRvCCAJ3xmxeNkUYsQ864HZUb-pgA",
+            "place_id": "ChIJm19hWaVYwokRaiql7Vog2YY",
+            "rating": 5,
+            "reference": "CmRSAAAAn2QE0SyYd21ttDK0RhvvisOf7t3FrAWVqpkGKe765PHw15s8lfj9YXrBV3U3BwxR3LUHWJWrbMiw2SuDrZ_07ms3AhCfnB_1BNUT3cTOq_heAkOw5hfwS_ED60PwD4CyEhDrtGkUekCnM1lu2s9ZrMcEGhQT24hYFMOt9ecKwnSbjmzJBr6Jgg",
             "scope": "GOOGLE",
             "types": [
                 "school",
                 "point_of_interest",
                 "establishment"
             ],
-            "vicinity": "13641 Clinton Street, Garden Grove"
+            "vicinity": "525 West 44th Street, New York"
         },
         {
             "geometry": {
                 "location": {
-                    "lat": 33.7569333,
-                    "lng": -117.8633114
+                    "lat": 40.7510968,
+                    "lng": -74.0310114
                 },
                 "viewport": {
                     "northeast": {
-                        "lat": 33.7582830302915,
-                        "lng": -117.8623034697085
+                        "lat": 40.75241958029149,
+                        "lng": -74.02941721970849
                     },
                     "southwest": {
-                        "lat": 33.7555850697085,
-                        "lng": -117.8650014302915
+                        "lat": 40.7497216197085,
+                        "lng": -74.0321151802915
                     }
                 }
             },
             "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
-            "id": "7f23992316340a7e901b2226c43c44055547f9e2",
-            "name": "Davis Elementary School",
-            "place_id": "ChIJw1DuyKXZ3IARplkhU-hgcwc",
-            "rating": 4.7,
-            "reference": "CmRRAAAAFurB6-JwM7KzvP93gcm6x8raXrJPeFcQoSfIUXjw82Lstivg2Isp832Illq2opwDipmRxCI_9540wiqVlPjdbWYNWdCU_pKDgIrQJkfUjrJkGPP2yBUjl_hJ_uhqh2vPEhC64N5y6vWS_M5vgl11QXIwGhSMqBSfDMUSTJ0UayVS6bqPJkXywQ",
-            "scope": "GOOGLE",
-            "types": [
-                "school",
-                "point_of_interest",
-                "establishment"
-            ],
-            "vicinity": "1405 French Street, Santa Ana"
-        },
-        {
-            "geometry": {
-                "location": {
-                    "lat": 33.7844472,
-                    "lng": -117.8393474
-                },
-                "viewport": {
-                    "northeast": {
-                        "lat": 33.7856679302915,
-                        "lng": -117.8380003697085
-                    },
-                    "southwest": {
-                        "lat": 33.7829699697085,
-                        "lng": -117.8406983302915
-                    }
-                }
-            },
-            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
-            "id": "041ca9d679e1d462cb05025c5604e42a8276a7df",
-            "name": "Palmyra Elementary School",
+            "id": "c3465a722d260f5e668f814a4fbb687ce2f57695",
+            "name": "Wallace Elementary School",
             "photos": [
                 {
-                    "height": 480,
+                    "height": 661,
                     "html_attributions": [
-                        "<a href=\"https://maps.google.com/maps/contrib/101573945509954269344/photos\">Rolando Lemus</a>"
+                        "<a href=\"https://maps.google.com/maps/contrib/110647442581043583950/photos\">deeksha jonnalagadda</a>"
                     ],
-                    "photo_reference": "CmRaAAAAAYqKGi6xUrl_2rRKULEpmLChRW_2j5rRK6yb8DVOkZix8NCed3-IseQVnl7Iur7tKNc89M5u-AzB7wq0egGBSz8M_cHA1nUvW4JecZv3EgCz6QJame13Igzdfm5LNqVGEhCEvHF9O_1pNwwj1PPGyOGuGhSSuYlh0cS4lMunoRiKdwZYFx-TvA",
-                    "width": 640
+                    "photo_reference": "CmRaAAAAgEQjvKNIJ2qkF3BVbR74DVzchaBea8G7bwJOheVIHh6bLVLLsfT_XPI1uKbrBA-0Vn0gqUtAchmrPAQJ8Cgb99fL2sr65220f6musPi8SkLoQF681lQMV19o-sJIzgUREhCEHXt5WWveKalOFhIxaR_mGhTLyhKBPuzQuBjRYNo_hedZwxilGQ",
+                    "width": 992
                 }
             ],
-            "place_id": "ChIJpxed4vDZ3IARJGId0EXEskc",
-            "rating": 4.6,
-            "reference": "CmRRAAAAu0NTS54nBJSaJvWo3e5OBCiq-Xlaa-ap1YOwVrwDJYOiYAulvFmSknfnXKBWmud29a2-gROeHT1-i0iXZErdY0yqTO2JpZLpF_dqchKq3oCxhkGjq6AvkNd81382E5deEhAOOTtSIs8maPn6brSHeEisGhTnaROM3CoUDGLH42vLpRrpeJLRdQ",
-            "scope": "GOOGLE",
-            "types": [
-                "school",
-                "point_of_interest",
-                "establishment"
-            ],
-            "vicinity": "1325 East Palmyra Avenue, Orange"
-        },
-        {
-            "geometry": {
-                "location": {
-                    "lat": 33.7483463,
-                    "lng": -117.8866914
-                },
-                "viewport": {
-                    "northeast": {
-                        "lat": 33.7494896302915,
-                        "lng": -117.8853399197085
-                    },
-                    "southwest": {
-                        "lat": 33.7467916697085,
-                        "lng": -117.8880378802915
-                    }
-                }
-            },
-            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
-            "id": "97585405f71c4aa78d07402aaa1b759245ed5c1f",
-            "name": "Carver Elementary School",
-            "place_id": "ChIJ5auJAVfY3IAR2gYkVLyLHKI",
-            "rating": 4.4,
-            "reference": "CmRSAAAAp99FnoQlGf8iPdyXyYtyUm1Rln4UU9yAuwvHOS1Jx_p3QwRUSqezR43mkSPDE1w8v5SOjFT3bbwZPSG-ATmgkGtxPJJFPgCfXvKVqqyI0Ki7O5LGNr9B0gjcSOglVbevEhBr9VQdSeQGj_asUvUo7rWrGhSQr7DaJEbbMxnzh2ZvXfdJYUaxWw",
-            "scope": "GOOGLE",
-            "types": [
-                "school",
-                "point_of_interest",
-                "establishment"
-            ],
-            "vicinity": "1401 West Santa Ana Boulevard, Santa Ana"
-        },
-        {
-            "geometry": {
-                "location": {
-                    "lat": 33.7166106,
-                    "lng": -117.8693805
-                },
-                "viewport": {
-                    "northeast": {
-                        "lat": 33.7179877302915,
-                        "lng": -117.8671998
-                    },
-                    "southwest": {
-                        "lat": 33.7152897697085,
-                        "lng": -117.8701074
-                    }
-                }
-            },
-            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
-            "id": "ea252f830d87a7f4624af6e2a6a688347a4502ca",
-            "name": "Esqueda Elementary School",
-            "place_id": "ChIJ_9grEi_Z3IARFgvwTOA7OOg",
+            "place_id": "ChIJTeiKu2JXwokRDuH1yEp7lFQ",
             "rating": 4.3,
-            "reference": "CmRSAAAAF81F4ZTYBDZVwJHk6GBs5rMfJDDRh0g6AoIEGk_cDXqyGFOH3noP6Wnr8utidyLfwVBK6Y-qlwEi92htcMhQudTBbhAtWbL8x-OdxBkdP56_029qkeUUmQeVRvR2Y0UiEhAkgmrVHmkGAxYr1JrP__BAGhTnEmSKqFvORmIXgPW3R-0sYERHIg",
+            "reference": "CmRRAAAAggQfeKdu8_aqZ-pZ-_LVHtLrQ73c-4lkRHOncnpsX8Ow-BfLJKjfpxtjW-sVKTnCv61iQpKYcOBFdkA0FqZK-lloOlRfB8uUI4GLEfzK8LocEKYmTybAc3UXcHINU_C9EhBo6yrDHfVtxWssKsNuAQ5PGhQngsz-TmQvU5FZvkukpxCgOxk1bA",
             "scope": "GOOGLE",
             "types": [
                 "school",
                 "point_of_interest",
                 "establishment"
             ],
-            "vicinity": "2240 South Main Street, Santa Ana"
+            "vicinity": "1100 Willow Avenue, Hoboken"
         },
         {
             "geometry": {
                 "location": {
-                    "lat": 33.70293899999999,
-                    "lng": -117.9029288
+                    "lat": 40.7143159,
+                    "lng": -73.99571879999999
                 },
                 "viewport": {
                     "northeast": {
-                        "lat": 33.7045951802915,
-                        "lng": -117.9015831197085
+                        "lat": 40.7155920302915,
+                        "lng": -73.99436081970849
                     },
                     "southwest": {
-                        "lat": 33.7018972197085,
-                        "lng": -117.9042810802915
+                        "lat": 40.7128940697085,
+                        "lng": -73.9970587802915
                     }
                 }
             },
             "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
-            "id": "a0488c68645ffeb5df284867fecbeafbd306d533",
-            "name": "Thorpe Elementary School",
+            "id": "c47d522c0bab149baff582c272c7d03a2a893ddf",
+            "name": "Yung Wing Elementary School",
             "photos": [
                 {
-                    "height": 1088,
+                    "height": 2448,
                     "html_attributions": [
-                        "<a href=\"https://maps.google.com/maps/contrib/107926218791645032087/photos\">Efron Gtablet</a>"
+                        "<a href=\"https://maps.google.com/maps/contrib/113174724467637301561/photos\">Dwight Fu</a>"
                     ],
-                    "photo_reference": "CmRaAAAAM-EKeOkEwjc5DIcBpXYh0VRoLAnkHkQ7p4u00R2olkiRNReY_cPOfyv5wylUt2K9OV_fknsbUMTOtftxMZDUDxkDjV3Qz9vid4_F1MW1VkEi3orO5q3DFYXYe5eDPIyIEhBGNggQtoAOn1Yxu4143_MPGhSDQBF1rNi5n4WmiK0AByMLH9Q8bg",
-                    "width": 1406
+                    "photo_reference": "CmRaAAAAf_AWZ6zw8P-3WsihIdRUmzFLE0wsfiSEI5MIUFlrQBIuJdpVUxERxAbS8HqZjAH_zwI0a9YwtI_5pU6MY9z3YtwH9XkJVfVxeM0gNWkQD0zcU6mdy5ckjJMO3jPUqoV5EhAXe4IVhtHbe_E96bm8Hp8oGhS2Ji0f9i5MmBTQ5ViuvnEC5ElGFg",
+                    "width": 3264
                 }
             ],
-            "place_id": "ChIJnx_besrY3IARex3zGEf1s34",
-            "rating": 3.9,
-            "reference": "CmRRAAAA7GfH47L9-sra_LSeuSlnRwCUXdC3eJWJYVnTEIKH8kqXmIOmKv71Kl78xCxP--wAll8alcQxp2RV6Mvni229bK_nxRAinBf8HYuFOLkNg5r-rn7QaR7QPUF-WQhN4UITEhC4WMb3_aKhEunT1pEPpW-4GhR-m-t4Dy6FD2p_zevwxURSXJrTMg",
-            "scope": "GOOGLE",
-            "types": [
-                "school",
-                "point_of_interest",
-                "establishment"
-            ],
-            "vicinity": "2450 West Alton Avenue, Santa Ana"
-        },
-        {
-            "geometry": {
-                "location": {
-                    "lat": 33.7374907,
-                    "lng": -117.8403467
-                },
-                "viewport": {
-                    "northeast": {
-                        "lat": 33.7388421302915,
-                        "lng": -117.8385487697085
-                    },
-                    "southwest": {
-                        "lat": 33.7361441697085,
-                        "lng": -117.8412467302915
-                    }
-                }
-            },
-            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
-            "id": "cf434d699e83426d65fad86f753a0b6a45219f91",
-            "name": "Robert Heideman Elementary School",
-            "place_id": "ChIJ_fC9c2fZ3IARaDHDDDsGY4Y",
-            "rating": 4.5,
-            "reference": "CmRSAAAAK_uyWtUXEceulMv20Bpgm2-rCQzXO5DFpPRovZdGJ39d3hlhCU1aQXuNhsbH8ISo00NazbEfBKeeL2fufl8UyHe-DAGsEGOJ4LWOqUTbjbAvIQfzJfDuszqiKLtd4NQnEhAhxl6wihtVFFIg_LGhcQYEGhRU7M2xmPaNFfnbKKVgPntBbd5bmg",
-            "scope": "GOOGLE",
-            "types": [
-                "school",
-                "point_of_interest",
-                "establishment"
-            ],
-            "vicinity": "15571 Williams Street, Tustin"
-        },
-        {
-            "geometry": {
-                "location": {
-                    "lat": 33.7387082,
-                    "lng": -117.8770557
-                },
-                "viewport": {
-                    "northeast": {
-                        "lat": 33.7400605802915,
-                        "lng": -117.8753914697085
-                    },
-                    "southwest": {
-                        "lat": 33.7373626197085,
-                        "lng": -117.8780894302915
-                    }
-                }
-            },
-            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
-            "id": "138aca62151c69151b1c0a2aace2d6b10c60b575",
-            "name": "Lowell Elementary School",
-            "photos": [
-                {
-                    "height": 550,
-                    "html_attributions": [
-                        "<a href=\"https://maps.google.com/maps/contrib/100566267574950664323/photos\">Ruvine Jimenez</a>"
-                    ],
-                    "photo_reference": "CmRaAAAAqibvXlbZvPo8ja6HKdiRr4Wm70LcXN5oVlhJC2LXw06KYzL73-d30aTtCe8BEtCr20Nysk_xRsc-hKjX-55OEbtogcSIxZ7p7HSPJZMJozNcIff-VlVplzKFzPEA26YCEhBSystuRQsvU3FOy6tYqjk7GhST11yh5QZoaj16PE6yiCocN1sOFw",
-                    "width": 1024
-                }
-            ],
-            "place_id": "ChIJzRn_Y_3Y3IARfNbgurC_MAg",
+            "place_id": "ChIJYZFMJSZawokRGG1QyuwfgYI",
             "rating": 4.7,
-            "reference": "CmRRAAAArU6hBngbe2mWrCiNMFlA3TymWsZL1v3_8XX42Gog-7ZFxtr-GPd4vrsoUiWeVs4iW-ojtnwl_Q0Jue8KRoIz_Nj6ECJ3EdM6RiQ5zn3hazbO3pE7PZMproMs8e-4F2tBEhBkiv9nyLZF8HBtolobqr18GhRK1Mj0Tep55Hir4Amv3XIsB29jIA",
+            "reference": "CmRSAAAAJAPl71UUhkhuZ0vtECVr-RzZUMRf2zlaa99MLWEcxjUnBRIGEoei671JlG7OQvcIlq4KbdkBD2w78Gfk0C0qKfNg13gka2NT7QxkorBmW4YWpjl8eiysVfz3AMFI1iL4EhAaloJGoBiUkDzKH1s-N64MGhRlt9dK4-_F9E2B2bxjwqhPdf7AIQ",
             "scope": "GOOGLE",
             "types": [
                 "school",
                 "point_of_interest",
                 "establishment"
             ],
-            "vicinity": "700 South Flower Street, Santa Ana"
+            "vicinity": "40 Division Street, New York"
         },
         {
             "geometry": {
                 "location": {
-                    "lat": 33.7855028,
-                    "lng": -117.9101295
+                    "lat": 40.7077667,
+                    "lng": -74.0025206
                 },
                 "viewport": {
                     "northeast": {
-                        "lat": 33.7867800302915,
-                        "lng": -117.9087810197085
+                        "lat": 40.7091692802915,
+                        "lng": -74.00124331970849
                     },
                     "southwest": {
-                        "lat": 33.7840820697085,
-                        "lng": -117.9114789802915
+                        "lat": 40.7064713197085,
+                        "lng": -74.00394128029151
                     }
                 }
             },
             "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
-            "id": "ab4f79d09a2196acac09894783241a1c3bf14c16",
-            "name": "Earl Warren Elementary School",
-            "place_id": "ChIJ5Zluz_bX3IARsOc8rmwhGaM",
-            "rating": 4.2,
-            "reference": "CmRSAAAAPDzKN_rRNXhGmF3PVeXf1udAZVf8tYeMt0vOIFPS2hOdYN3fRkGM2vIwpO1h46RtaY7gnnvAQhx9Lf6CLPSQdQeo_e7K5GrzatllA37AX1bTg_qkbpbXgUCGxetTuBk7EhA4_Mx3tXofMJ48vjk24FP0GhQwM2mpAxlC2St2c0uPfQ-2P-aLdg",
+            "id": "c45f6116e0e40b1aaa48c705e14c1740ef745ba0",
+            "name": "Blue School",
+            "photos": [
+                {
+                    "height": 669,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/108482483197806727753/photos\">Blue School</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAAsCbjHssUhtksGAfTiMYWPgn5jH5Q0fBJvnPr8m6qXp4YXdVDlMejCpAJK3qM8BhHtsLDuoT94NFY_xT1W_yintxR8I7VbLTyAcBGUqhW5_1Cj3F2ZRCs5YiTobBO2jzEhB4QU6ml__0nR53yHzjFwlLGhRIRiALYPKGcjQ3vxG0MrSZ1O6VuQ",
+                    "width": 941
+                }
+            ],
+            "place_id": "ChIJ4RyiEYJZwokRfzFAGxjj_00",
+            "rating": 4.7,
+            "reference": "CmRRAAAAe0hghcwQhd2TytdA9kmwnUW7vhpi-otYyXF4AIMFHPEP7sSdx0LPNjiAZ8_c6iHCXEcKJrVWXE08hPJRv0KWjFSZKUTROuyLI0X3U0ivQNMQ-AMeBPlA0ilUdMlA8L4QEhCcDkkdWt30V3m9YZ7fiuLFGhTyjAnfXW_9JVQzeslZmFsQ6XBF3A",
             "scope": "GOOGLE",
             "types": [
                 "school",
                 "point_of_interest",
                 "establishment"
             ],
-            "vicinity": "12871 Estock Drive, Garden Grove"
+            "vicinity": "241 Water Street, New York"
         },
         {
             "geometry": {
                 "location": {
-                    "lat": 33.7404839,
-                    "lng": -117.9021936
+                    "lat": 40.7621537,
+                    "lng": -74.03075819999999
                 },
                 "viewport": {
                     "northeast": {
-                        "lat": 33.7418322802915,
-                        "lng": -117.9010227197085
+                        "lat": 40.7632806802915,
+                        "lng": -74.02957521970849
                     },
                     "southwest": {
-                        "lat": 33.7391343197085,
-                        "lng": -117.9037206802915
+                        "lat": 40.7605827197085,
+                        "lng": -74.0322731802915
                     }
                 }
             },
             "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
-            "id": "f0a4010e29e50c2e11c88dedc6530fb991cbe024",
-            "name": "Abraham Lincoln Elementary School",
-            "place_id": "ChIJUb51rIrY3IAR-FhnS-w6HiU",
+            "id": "b48a03a767996546667c8ca4b4a5aeb1c04c4def",
+            "name": "Hudson Elementary School",
+            "photos": [
+                {
+                    "height": 1080,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/116102555554575567511/photos\">Ivette Avila</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAj2NFGPqXi7syy7VfmujRzx1ZPL5XtAyCGNveyCgHS9XCq5Vh7VqSq3K45ja1yNkUyln0g_bbpsaAJFaP8jTn4ic9NDCXk-xOZKD-PsDt2qVvZp0UOqI7kS_EAfWC8lIBEhAdCfxGTdTPk97pzRwRy7aPGhSATQpUSCQoYUY88DQGHEf-H3QD0g",
+                    "width": 1080
+                }
+            ],
+            "place_id": "ChIJgSuOBIBXwokRY24CPn09MlY",
             "rating": 4,
-            "reference": "CmRRAAAAe61LFkR31Dtux0XYb5REiceaeI4jpcjFE6n4wRKSexEUD_eIn1kTxjAOVKUCWJjLuhWmosoqj9575FOp_Qj0hpWYrJvg_w7pXL5ydFOyUnV2FP-8tlZskdkUFBkSpvbSEhBka2AagpdPaJmjMTpKvCAMGhQ24xbWzxk4Ibuh9KLKJXDaRZOSdQ",
+            "reference": "CmRRAAAAQnahCpa3xjSo7gkZKdx1ZPBu23I46NQeMebOWKy5mBHnnQbJn5RRcpi99e9mqJIwDJ8Tl0YoNFMOGUvGJnDlYYPCZiYcIam2PjpQZZ-i8bu6isbXu3npJjwLLjqPEd30EhDFvVsJwzJb0tYW2aDnlZ9fGhSHLKnOdxS9VLweNa1UmzEy5u6WNQ",
             "scope": "GOOGLE",
             "types": [
                 "school",
                 "point_of_interest",
                 "establishment"
             ],
-            "vicinity": "425 South Sullivan Street, Santa Ana"
+            "vicinity": "166 18th Street, Union City"
         },
         {
             "geometry": {
                 "location": {
-                    "lat": 33.74746700000001,
-                    "lng": -117.889185
+                    "lat": 40.77869689999999,
+                    "lng": -74.01986789999999
                 },
                 "viewport": {
                     "northeast": {
-                        "lat": 33.74903258029151,
-                        "lng": -117.8878392697085
+                        "lat": 40.7799613802915,
+                        "lng": -74.01832976970849
                     },
                     "southwest": {
-                        "lat": 33.74633461970851,
-                        "lng": -117.8905372302915
+                        "lat": 40.7772634197085,
+                        "lng": -74.02102773029151
                     }
                 }
             },
             "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
-            "id": "735f466e37ec6f060b2f280eb97c07b7d03fda73",
-            "name": "Lydia Romero-Cruz Elementary School",
-            "place_id": "ChIJQwQxelfY3IARy74jUlPRa3I",
-            "rating": 4.8,
-            "reference": "CmRRAAAAaoLS19RzS5KI9wE8TdMHDxthcpo2QB8o2SUVysRGg8PC5Jzg_eI1AdXovcKWRSe5FIG_qYdcxTYWTlmWnTDs83xa9I1X-0OTgnoaMGPvq_uviKGNra1sh4uQNXNpwQsREhBKqmIQd5u6RzOpJtTpchPwGhQHqoghxr4Gakre7C-LgYY3TduKmw",
-            "scope": "GOOGLE",
-            "types": [
-                "school",
-                "point_of_interest",
-                "establishment"
-            ],
-            "vicinity": "1512 West Santa Ana Boulevard, Santa Ana"
-        },
-        {
-            "geometry": {
-                "location": {
-                    "lat": 33.7145623,
-                    "lng": -117.8631691
-                },
-                "viewport": {
-                    "northeast": {
-                        "lat": 33.7155692802915,
-                        "lng": -117.8618266697085
-                    },
-                    "southwest": {
-                        "lat": 33.7128713197085,
-                        "lng": -117.8645246302915
-                    }
-                }
-            },
-            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
-            "id": "f47b388db62c9caf23817a48841b74660bc289a6",
-            "name": "Monroe Elementary School",
-            "place_id": "ChIJE83BLTLZ3IARXc56SuEZ1q0",
-            "rating": 4.1,
-            "reference": "CmRSAAAAVXcn6dWXDf0xwfGucIIQzZ2Aaym5v9AASGJb2Sn6MNG-y-lfzE-Z7vr-ULzmbewJJoRz11Fk83Qss8lXqfSreDiya3rYjNargNSt1r4mZz41BvuBJTdo7JKRkxfMhIzjEhAlPgsT3VFEsFujHGMawdF4GhQaY0yRFKOt4nJyNK1z_LZTPrCAhQ",
-            "scope": "GOOGLE",
-            "types": [
-                "school",
-                "point_of_interest",
-                "establishment"
-            ],
-            "vicinity": "417 East Central Avenue, Santa Ana"
-        },
-        {
-            "geometry": {
-                "location": {
-                    "lat": 33.7494401,
-                    "lng": -117.8602873
-                },
-                "viewport": {
-                    "northeast": {
-                        "lat": 33.7509431302915,
-                        "lng": -117.8590653197085
-                    },
-                    "southwest": {
-                        "lat": 33.7482451697085,
-                        "lng": -117.8617632802915
-                    }
-                }
-            },
-            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
-            "id": "0fc4b0db407ef31e4c6d60a00297f221835ce40f",
-            "name": "Garfield Elementary School",
+            "id": "c8ecdcdc755a0a44440242044754653237a8d00b",
+            "name": "Roosevelt Elementary School",
             "photos": [
                 {
-                    "height": 1152,
+                    "height": 1224,
                     "html_attributions": [
-                        "<a href=\"https://maps.google.com/maps/contrib/115661496881490085833/photos\">Brandon Sosa</a>"
+                        "<a href=\"https://maps.google.com/maps/contrib/103128743308034243737/photos\">Donroyceroy dominguez</a>"
                     ],
-                    "photo_reference": "CmRaAAAAio08T8BQSaur6LgevDDyJmEzkT4uxTbebUCycOGGQHp6xnV6yXv_zpKDiZxF-3KhqHClGSwXQv8gP7xzdDi0nPyehtPbp8lP7KPemohIARoL4gWZVj-LEs3Fjb8xvhESEhAhOhvgtcS5CDtUo6JFt_DAGhTrnvZocHdvwjKDpgSbc0-QvrU_3g",
-                    "width": 2048
+                    "photo_reference": "CmRaAAAAN6Yrjw46DXe9UlSWVLsIQ5vSCZJo8N4a9jpFlxvwB14_l-uwTutd7TLLQYg1jaHpVQnPNZPnjbClNyZTXv6L-stT8S_ni1FipnsuUG9Sp0M5lF8qQvT-vkmNn1LUEk2-EhAQxI8pfaVrEuogEnh8aWvZGhS0Mg1AmvHwgNsYM-fmrMbw7a4qxA",
+                    "width": 1632
                 }
             ],
-            "place_id": "ChIJrxcXJArZ3IARrYYCDepJ1Vk",
-            "rating": 4.3,
-            "reference": "CmRRAAAArXGNVPVEOz63DIWa6ti-SZoTZKkOdXXrGs6puTl4rWUavk0SSeKcoSrkda4YjsZleXksKQBpGlJPO9_c-nh7NWYpRh8Ol5QlXghAd5YJEg5zXvVz55QcNbj_iOg010itEhClvCZGWdMxVIsYxD9AYiUcGhTmBAOa5ucv2RNZwMTEHbyWRY1w5Q",
+            "place_id": "ChIJv8TF5iJYwokRcaCkUJxT2MQ",
+            "rating": 3.8,
+            "reference": "CmRSAAAA1hR3BhHkUibRtpQL-W12ZNk8_OwZHDCL4fGTjup2p5tcgNsDrpWnphiOnU9WvdHHcuO63gLj7mJQIV97-lH_weAB669cZgHEIS81z_keQhgrxyid9vdSoUjIeS4_Why1EhDbso9EE_h5L0G-5s4UnbtBGhRQrwKw-HDfh2nC6J_UtV-zAcqqXQ",
             "scope": "GOOGLE",
             "types": [
                 "school",
                 "point_of_interest",
                 "establishment"
             ],
-            "vicinity": "850 Brown Street, Santa Ana"
+            "vicinity": "4507 Hudson Avenue, Union City"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 40.7362223,
+                    "lng": -73.98250380000002
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.7374992302915,
+                        "lng": -73.98111226970849
+                    },
+                    "southwest": {
+                        "lat": 40.73480126970851,
+                        "lng": -73.9838102302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+            "id": "eb9265f65cf1cbed10724f8a0ebaea87158406cc",
+            "name": "Learning Spring School",
+            "photos": [
+                {
+                    "height": 2448,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/115235755172384586896/photos\">Christopher Jenness</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAbGSIAubstPKbhiBWXDSA8GMmUCidyXiJEbtih9Cm8Xxl0cXKvf-Gnr_AMPJOleFEYtvDH-lNcTZs76YEFbpgHRZyNnJtzh2Oui5IYddGVDRcLBm2rloEZZUChH-XPTjkEhBLuK3_YSJuW7BTK7BunHUAGhTA7aY26MVzk6HYfZYjdvSQpgATCA",
+                    "width": 3264
+                }
+            ],
+            "place_id": "ChIJn6xiowpZwokRuQr0JHjxUkw",
+            "rating": 4.7,
+            "reference": "CmRRAAAAw74jip48Zmw-x1pHifHOYiV5CeYrITfN4zgpQG4UKLqjsChcvU2ErYYKI4VEq1jG-JoydPG-2LB3WbH90seAFK8o9ve03FjKQZjM7y6v3VtFLkZ5WWrNm1qpcVMimnTaEhCJjQhb0dE5koZ2QAMJ76rRGhTwfdJSZ7TCJlzooEluFb6bne7GkQ",
+            "scope": "GOOGLE",
+            "types": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "247 East 20th Street, New York"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 40.7624331,
+                    "lng": -74.03956629999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.7637274802915,
+                        "lng": -74.03806596970848
+                    },
+                    "southwest": {
+                        "lat": 40.7610295197085,
+                        "lng": -74.04076393029149
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+            "id": "c33d3dec93bd75b9cd67f6347f2a8ba9290d91fd",
+            "name": "Veterans’ Memorial Elementary School",
+            "place_id": "ChIJpUBlb3hXwokRgVxkHzeZVmg",
+            "rating": 4.7,
+            "reference": "CmRRAAAALgTiOGUTIutw7qkAOXBNTJQshYeQWC0miCUsN9TkPqH_eARJJiMgZPYGRocnvKqz-LYDYyr3m7UVIaLnr5QV-k392Z7Wc13hvpxsobNOXCDSQaQUJLd39wcqCzp8cwRDEhD1UVPL3IfD8k4j9xcEOehVGhQ-jdPbxquh2YFJ6sjjCMOaZmA30A",
+            "scope": "GOOGLE",
+            "types": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "1401 Central Avenue, Union City"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 40.7686519,
+                    "lng": -74.02812960000001
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.77006643029149,
+                        "lng": -74.0269645697085
+                    },
+                    "southwest": {
+                        "lat": 40.76736846970849,
+                        "lng": -74.0296625302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+            "id": "35f88b82249276587364d68939426567f855f20a",
+            "name": "Daniel Webster No. 2 Elementary School",
+            "photos": [
+                {
+                    "height": 972,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/106145322201988270287/photos\">Dino Rodriguez</a>"
+                    ],
+                    "photo_reference": "CmRaAAAABKChlMH2b4Ly0ReDzkDXJJHSp3_7xHP_Gr7kjEtlIpFI1u7_996Cu4-czhBP-LLXkU1UphntnF1BFT61G6fGPGMNrH4Nh9snkun8uxPXQfx5ncpD3iaRPz6uE1Yv8lS8EhCL20Z8BLemLWWjP82kJRqSGhQrROcUWGpq6oZ1tOI5BrMgmBi5Dg",
+                    "width": 1296
+                }
+            ],
+            "place_id": "ChIJA7U0silYwokRRzYXUOWmI0c",
+            "rating": 4.8,
+            "reference": "CmRRAAAAbWvwV8bW-LxRCeT4OIAgo2h1eMTE7dOvGzOulHkT8MOHmPv5RrpNysrd4ifMI1GtdZn0W5t6m_Ig7ns6O5cmw0KnS9R6DhNt7W8JSf-W0Z1ALK_s5zsrusT4Mgoq_9WuEhBCrs7ZqplRrxDrzZzjX8eBGhSaYq1nf6OpoN_69fsL77Ke-wLx_Q",
+            "scope": "GOOGLE",
+            "types": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "2700 Palisade Avenue, Weehawken"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 40.7149187,
+                    "lng": -73.95286709999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.7162374302915,
+                        "lng": -73.95155051970849
+                    },
+                    "southwest": {
+                        "lat": 40.7135394697085,
+                        "lng": -73.9542484802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+            "id": "50091fa4d39c2df147d5d738d9fb5e032092c929",
+            "name": "Williamsburg Northside Lower School",
+            "opening_hours": {
+                "open_now": false,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 4640,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/115327997445795336771/photos\">Eric Harnois</a>"
+                    ],
+                    "photo_reference": "CmRaAAAApffpP8yuh90ACj-ZL36CFXkuD5f0v7VtkxpFW4VXvxYo4tFjI4CXZkneffsWonsd4b4YuGdbn4MzxPmF70aIbriyOl8PamafIPmVNQZqjxo7eLUVwbc2dvuXx_DR5Y5gEhA8Ey37WBtViyHcNQqJIwFFGhQFHCCVJlNhil9knTbAc1A4tBvZtg",
+                    "width": 3480
+                }
+            ],
+            "place_id": "ChIJH4Oa3V5ZwokRTwWjonXyZTs",
+            "rating": 5,
+            "reference": "CmRRAAAAqaLsQ2BHA84NYi0osMGoWjbrl0mohoPk2HoH90B1ObbBhEL3UgvLCd1Tc_tB0sR77MNz2TWgpr2l-sZPmzioE_x_4sVOtjqE6DtcsKXY8iforWjhPqBzD5E_vySuF-JqEhAgHjxJRPGz40E9-d3sdPgmGhQi6_tnhnsMWh4fkBISLirjUuH03A",
+            "scope": "GOOGLE",
+            "types": [
+                "school",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "299 North 7th Street, Brooklyn"
         }
     ],
     "status": "OK"
