@@ -1,53 +1,51 @@
 // Getting schools' names and lat, long coordinates from Google's JSONs
-
-var elemSchoolsArr = [];
+var locations = [];
 $.getJSON('elementary-schools.json', function(data){
   for (var i = 0; i < 10; i++) {  // Only using 10 schools
     var elemSchoolsObj = {};
     elemSchoolsObj.title = data.results[i].name;
     elemSchoolsObj.location = data.results[i].geometry.location;
-    elemSchoolsArr.push(elemSchoolsObj);
+    locations.push(elemSchoolsObj);
   }
 });
-
-var midSchoolsArr = [];
 $.getJSON('middle-schools.json', function(data){
   for (var i = 0; i < 10; i++) {
     var midSchoolsObj = {};
     midSchoolsObj.title = data.results[i].name;
     midSchoolsObj.location = data.results[i].geometry.location;
-    midSchoolsArr.push(midSchoolsObj);
+    locations.push(midSchoolsObj);
   }
 });
-
-var hiSchoolsArr = [];
 $.getJSON('high-schools.json', function(data){
   for (var i = 0; i < 10; i++) {
     var hiSchoolsObj = {};
     hiSchoolsObj.title = data.results[i].name;
     hiSchoolsObj.location = data.results[i].geometry.location;
-    hiSchoolsArr.push(hiSchoolsObj);
+    locations.push(hiSchoolsObj);
   }
 });
-
-var collegesArr = [];
 $.getJSON('colleges.json', function(data){
   for (var i = 0; i < 10; i++) {
     var collegesObj = {};
     collegesObj.title = data.results[i].name;
     collegesObj.location = data.results[i].geometry.location;
-    collegesArr.push(collegesObj);
+    locations.push(collegesObj);
   }
 });
 
+
 var map;
+
 // Create a new blank array for all the listing markers.
 var markers = [];
+
 // This global polygon variable is to ensure only ONE polygon is rendered.
 var polygon = null;
+
 // Create placemarkers array to use in multiple functions to have control
 // over the number of places that show.
 var placeMarkers = [];
+
 function initMap() {
   // Create a styles array to use with the map.
 
@@ -70,16 +68,7 @@ function initMap() {
       document.getElementById('places-search'));
   // Bias the searchbox to within the bounds of the map.
   searchBox.setBounds(map.getBounds());
-  // These are the real estate listings that will be shown to the user.
-  // Normally we'd have these in a database instead.
-  var locations = [
-    {title: 'Park Ave Penthouse', location: {lat: 40.7713024, lng: -73.9632393}},
-    {title: 'Chelsea Loft', location: {lat: 40.7444883, lng: -73.9949465}},
-    {title: 'Union Square Open Floor Plan', location: {lat: 40.7347062, lng: -73.9895759}},
-    {title: 'East Village Hip Studio', location: {lat: 40.7281777, lng: -73.984377}},
-    {title: 'TriBeCa Artsy Bachelor Pad', location: {lat: 40.7195264, lng: -74.0089934}},
-    {title: 'Chinatown Homey Space', location: {lat: 40.7180628, lng: -73.9961237}}
-  ];
+
   var largeInfowindow = new google.maps.InfoWindow();
   // Initialize the drawing manager.
   var drawingManager = new google.maps.drawing.DrawingManager({
