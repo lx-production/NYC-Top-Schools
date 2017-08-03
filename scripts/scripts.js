@@ -33,7 +33,6 @@ $.getJSON('colleges.json', function(data){
   }
 });
 
-
 var map;
 
 // Create a new blank array for all the listing markers.
@@ -47,14 +46,13 @@ var polygon = null;
 var placeMarkers = [];
 
 function initMap() {
-  // Create a styles array to use with the map.
-
   // Constructor creates a new map - only center and zoom are required.
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 40.7413549, lng: -73.9980244},
     zoom: 13,
     mapTypeControl: false
   });
+
   // This autocomplete is for use in the search within time entry box.
   var timeAutocomplete = new google.maps.places.Autocomplete(
       document.getElementById('search-within-time-text'));
@@ -82,10 +80,12 @@ function initMap() {
     }
   });
   // Style the markers a bit. This will be our listing marker icon.
-  var defaultIcon = makeMarkerIcon('0091ff');
+  var defaultIcon = makeMarkerIcon('2b5cff');
+
   // Create a "highlighted location" marker color for when the user
   // mouses over the marker.
-  var highlightedIcon = makeMarkerIcon('FFFF24');
+  var highlightedIcon = makeMarkerIcon('ff2b2b');
+
   // The following group uses the location array to create an array of markers on initialize.
   for (var i = 0; i < locations.length; i++) {
     // Get the position from the location array.
