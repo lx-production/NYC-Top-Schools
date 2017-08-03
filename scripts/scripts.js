@@ -89,7 +89,6 @@ function initMap() {
 
 
   document.getElementById('show-listings').addEventListener('click', showListings);
-  // $('#show-listings').click(showListings);
 
   document.getElementById('hide-listings').addEventListener('click', function() {
     hideMarkers(markers);
@@ -133,6 +132,7 @@ function initMap() {
     polygon.getPath().addListener('insert_at', searchWithinPolygon);
   });
 }
+
 // This function populates the infowindow when the marker is clicked. We'll only allow
 // one infowindow which will open at the marker that is clicked, and populate based
 // on that markers position.
