@@ -1,7 +1,7 @@
 // Getting schools' names and lat, long coordinates from Google's JSONs
 var locations = [];
 $.getJSON('elementary-schools.json', function(data){
-  for (var i = 0; i < 10; i++) {  // Only using 10 schools
+  for (var i = 0; i < 6; i++) {  // Only using 10 schools
     var elemSchoolsObj = {};
     elemSchoolsObj.title = data.results[i].name;
     elemSchoolsObj.location = data.results[i].geometry.location;
@@ -9,7 +9,7 @@ $.getJSON('elementary-schools.json', function(data){
   }
 });
 $.getJSON('middle-schools.json', function(data){
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < 6; i++) {
     var midSchoolsObj = {};
     midSchoolsObj.title = data.results[i].name;
     midSchoolsObj.location = data.results[i].geometry.location;
@@ -17,7 +17,7 @@ $.getJSON('middle-schools.json', function(data){
   }
 });
 $.getJSON('high-schools.json', function(data){
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < 6; i++) {
     var hiSchoolsObj = {};
     hiSchoolsObj.title = data.results[i].name;
     hiSchoolsObj.location = data.results[i].geometry.location;
@@ -25,7 +25,7 @@ $.getJSON('high-schools.json', function(data){
   }
 });
 $.getJSON('colleges.json', function(data){
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < 6; i++) {
     var collegesObj = {};
     collegesObj.title = data.results[i].name;
     collegesObj.location = data.results[i].geometry.location;
@@ -56,9 +56,12 @@ function initMap() {
   // This autocomplete is for use in the search within time entry box.
   var timeAutocomplete = new google.maps.places.Autocomplete(
       document.getElementById('search-within-time-text'));
+
+
   // This autocomplete is for use in the geocoder entry box.
   var zoomAutocomplete = new google.maps.places.Autocomplete(
       document.getElementById('zoom-to-area-text'));
+
   // Bias the boundaries within the map for the zoom to area text.
   zoomAutocomplete.bindTo('bounds', map);
   // Create a searchbox in order to execute a places search
@@ -114,7 +117,8 @@ function initMap() {
       this.setIcon(defaultIcon);
     });
   }
-  document.getElementById('show-listings').addEventListener('click', showListings);
+  $('#show-listings').click(showListings);
+
   document.getElementById('hide-listings').addEventListener('click', function() {
     hideMarkers(markers);
   });
@@ -127,6 +131,7 @@ function initMap() {
   document.getElementById('search-within-time').addEventListener('click', function() {
     searchWithinTime();
   });
+
   // Listen for the event fired when the user selects a prediction from the
   // picklist and retrieve more details for that place.
   searchBox.addListener('places_changed', function() {
