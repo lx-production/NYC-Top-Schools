@@ -57,13 +57,16 @@ hr {
   font-size: 12px;
 }
 #toggle-drawing {
-  width: 27%;
   position: relative;
-  margin-left: 10px;
 }
 #zoom-to-area-text {
   width: 70%;
 }
 #zoom-to-area {
   width: 24%;
+}
+
+.gm-style .gm-style-iw {
+  font-size: 18px;
+  font-weight: normal;
 }

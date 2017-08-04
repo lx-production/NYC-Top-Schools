@@ -59,13 +59,15 @@ function initMap() {
   // This autocomplete is for use in the geocoder entry box.
   var zoomAutocomplete = new google.maps.places.Autocomplete(
       document.getElementById('zoom-to-area-text'));
-  // Bias the boundaries within the map for the zoom to area text.
-  zoomAutocomplete.bindTo('bounds', map);
-  // Create a searchbox in order to execute a places search
+      // Create a searchbox in order to execute a places search
   var searchBox = new google.maps.places.SearchBox(
       document.getElementById('places-search'));
-  // Bias the searchbox to within the bounds of the map.
-  searchBox.setBounds(map.getBounds());
+
+  // Bias the boundaries within the map for the zoom to area text
+  // and search within time and searchBox
+  zoomAutocomplete.bindTo('bounds', map);
+  timeAutocomplete.bindTo('bounds', map);
+  searchBox.bindTo('bounds', map);
 
   var largeInfowindow = new google.maps.InfoWindow();
   // Initialize the drawing manager.
