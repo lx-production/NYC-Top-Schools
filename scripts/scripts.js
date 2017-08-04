@@ -519,3 +519,11 @@ function getPlacesDetails(marker, infowindow) {
     }
   });
 }
+
+function openNav() {
+    document.getElementById("options-box").style.left = "0px";
+}
+
+function closeNav() {
+    document.getElementById("options-box").style.left = "-250px";
+}

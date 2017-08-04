@@ -31,11 +31,13 @@ hr {
 #map {
   bottom:0px;
   height: 100%;
-  left: 362px;
+  left: 0px;
   position: absolute;
   right: 0px;
 }
 .options-box {
+  position: absolute;
+  z-index: 1;
   background: #fff;
   border: 1px solid #999;
   border-radius: 3px;
