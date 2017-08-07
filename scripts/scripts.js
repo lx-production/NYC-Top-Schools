@@ -439,21 +439,30 @@ function searchBoxPlaces(searchBox) {
     createMarkersForPlaces(places);
   }
 }
+
 // This function firest when the user select "go" on the places search.
 // It will do a nearby search using the entered query string or place.
 function textSearchPlaces() {
   var bounds = map.getBounds();
   hideMarkers(placeMarkers);
   var placesService = new google.maps.places.PlacesService(map);
-  placesService.textSearch({
-    query: document.getElementById('places-search').value,
-    bounds: bounds
-  }, function(results, status) {
-    if (status === google.maps.places.PlacesServiceStatus.OK) {
-      createMarkersForPlaces(results);
-    }
-  });
+  // Get the address or place that the user entered.
+  var search = document.getElementById('places-search').value;
+  // Make sure the search isn't blank.
+  if (search == '') {
+    window.alert('You must enter something to be searched');
+  } else {
+    placesService.textSearch({
+      query: document.getElementById('places-search').value,
+      bounds: bounds
+    }, function(results, status) {
+      if (status === google.maps.places.PlacesServiceStatus.OK) {
+        createMarkersForPlaces(results);
+      }
+    });
+  }
 }
+
 // This function creates markers for each place found in either places search.
 function createMarkersForPlaces(places) {
   var bounds = new google.maps.LatLngBounds();
