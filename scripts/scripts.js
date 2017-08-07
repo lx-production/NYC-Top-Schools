@@ -117,28 +117,45 @@ function initMap() {
       this.setIcon(defaultIcon);
     });
   }
-  document.getElementById('show-listings').addEventListener('click', showListings);
 
+  document.getElementById('show-listings').addEventListener('click', showListings);
   document.getElementById('hide-listings').addEventListener('click', function() {
     hideMarkers(markers);
   });
   document.getElementById('toggle-drawing').addEventListener('click', function() {
     toggleDrawing(drawingManager);
   });
-  document.getElementById('zoom-to-area').addEventListener('click', function() {
-    zoomToArea();
-  });
+  // document.getElementById('zoom-to-area').addEventListener('click', function() {
+  //   zoomToArea();
+  // });
+  document.getElementById('zoom-to-area').addEventListener('click', zoomToArea);
   document.getElementById('search-within-time').addEventListener('click', function() {
     searchWithinTime();
   });
+  document.getElementById('go-places').addEventListener('click', textSearchPlaces);
+
+  // Adding search-upon-enter for zoom-to-area-text field
+  $('#zoom-to-area-text').keypress(function(e){
+        if(e.which == 13){  // Enter key pressed
+            $('#zoom-to-area').click();  // Trigger search button click event
+        }
+    });
+
+  // Adding search-upon-enter for search-within-time-text field
+  $('#search-within-time-text').keypress(function(e){
+        if(e.which == 13){  // Enter key pressed
+            $('#search-within-time').click();  // Trigger search button click event
+        }
+    });
+
   // Listen for the event fired when the user selects a prediction from the
   // picklist and retrieve more details for that place.
   searchBox.addListener('places_changed', function() {
     searchBoxPlaces(this);
   });
-  // Listen for the event fired when the user selects a prediction and clicks
-  // "go" more details for that place.
-  document.getElementById('go-places').addEventListener('click', textSearchPlaces);
+
+
+
   // Add an event listener so that the polygon is captured,  call the
   // searchWithinPolygon function. This will show the markers in the polygon,
   // and hide any outside of it.
@@ -260,14 +277,17 @@ function searchWithinPolygon() {
     }
   }
 }
+
 // This function takes the input value in the find nearby area text input
 // locates it, and then zooms into that area. This is so that the user can
 // show all listings, then decide to focus on one area of the map.
 function zoomToArea() {
   // Initialize the geocoder.
   var geocoder = new google.maps.Geocoder();
+
   // Get the address or place that the user entered.
   var address = document.getElementById('zoom-to-area-text').value;
+
   // Make sure the address isn't blank.
   if (address == '') {
     window.alert('You must enter an area, or address.');
@@ -280,7 +300,7 @@ function zoomToArea() {
       }, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
           map.setCenter(results[0].geometry.location);
-          map.setZoom(15);
+          map.setZoom(18);
         } else {
           window.alert('We could not find that location - try entering a more' +
               ' specific place.');
@@ -288,6 +308,7 @@ function zoomToArea() {
       });
     }
   }
+
 // This function allows the user to input a desired travel time, in
 // minutes, and a travel mode, and a location - and only show the listings
 // that are within that travel time (via that travel mode) of the location

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <script type="text/javascript" src="/scripts/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="/scripts/ko-3.4.2.js"></script>
@@ -8,49 +9,47 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container-test">
       <div id="options-box" class="options-box">
         <h1>Schools in NYC</h1>
         <div>
-          <input id="show-listings" type="button" value="Show Schools">
-          <input id="hide-listings" type="button" value="Hide Schools">
-          <hr>
-          <input id="toggle-drawing"  type="button" value="Draw an area to search for schools within">
+          <button id="show-listings" class="btn btn-primary" style="width:49%">Show Schools</button>
+          <button id="hide-listings" class="btn btn-primary" style="width:49%">Hide Schools</button>
+          <button id="toggle-drawing" class="btn btn-primary">Draw an area to search for schools within</button>
         </div>
-        <hr>
         <div>
-          <input id="zoom-to-area-text" type="text" placeholder="Enter your favorite area!">
-          <input id="zoom-to-area" type="button" value="Zoom">
+          <input type="text" class="form-control" id="zoom-to-area-text" placeholder="Enter your favorite area!">
+          <button id="zoom-to-area" class="btn btn-primary" style="margin-bottom:0px">Zoom</button>
         </div>
-        <hr>
+        <br>
         <div>
-          <span class="text">Direction within </span>
-          <select id="max-duration">
-            <option value="10">10 min</option>
+          <p class="text">Direction within </p>
+          <select id="max-duration" class="custom-select">
+            <option selected value="10">10 min</option>
             <option value="15">15 min</option>
             <option value="30">30 min</option>
             <option value="60">1 hour</option>
           </select>
-          <select id="mode">
-            <option value="DRIVING">drive</option>
+          <select id="mode" class="custom-select">
+            <option selected value="DRIVING">drive</option>
             <option value="WALKING">walk</option>
             <option value="BICYCLING">bike</option>
             <option value="TRANSIT">transit ride</option>
           </select>
-          <span class="text">of</span>
-          <input id="search-within-time-text" type="text" placeholder="Type or paste your address here">
-          <input id="search-within-time" type="button" value="Go">
+          <span class="text"> of</span>
+          <input type="text" class="form-control" id="search-within-time-text" placeholder="Type or paste your address here">
+          <button id="search-within-time" class="btn btn-primary" style="margin-bottom:0px">Go</button>
         </div>
-        <hr>
+        <br>
         <div>
           <span class="text">Search for nearby places</span>
-          <input id="places-search" type="text" placeholder="Ex: Starbucks in NYC">
-          <input id="go-places" type="button" value="Go">
+          <input type="text" class="form-control" id="places-search" placeholder="Ex: Starbucks">
+          <button id="go-places" class="btn btn-primary" style="margin-bottom:0px">Go</button>
         </div>
         <hr>
         <div class="sidebar">
-          <input id="collapse" type="button" value="< Collapse" style="width: 48%" onclick="closeSideBar()">
-          <input id="expand" type="button" value="Expand >" style="width: 48%" onclick="openSideBar()">
+          <button id="collapse" class="btn btn-primary" style="width: 48%" onclick="closeSideBar()">< Collapse</button>
+          <button id="expand" class="btn btn-primary" style="width: 48%" onclick="openSideBar()">Expand ></button>
         </div>
       </div>
       <div id="map"></div>
