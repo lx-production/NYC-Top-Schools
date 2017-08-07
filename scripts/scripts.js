@@ -83,7 +83,7 @@ function initMap() {
     }
   });
   // Style the markers a bit. This will be our listing marker icon.
-  var defaultIcon = makeMarkerIcon('2b5cff');
+  var defaultIcon = makeMarkerIcon('0275d8');
 
   // Create a "highlighted location" marker color for when the user
   // mouses over the marker.
