@@ -1,3 +1,13 @@
+function openSideBar() {
+    document.getElementById("options-box").style.left = "0px";
+    document.getElementById("map").style.left = "360px";
+}
+
+function closeSideBar() {
+    document.getElementById("options-box").style.left = "-250px";
+    document.getElementById("map").style.left = "110px";
+}
+
 // Getting schools' names and lat, long coordinates from Google's JSONs
 // 24 schools total
 var locations = [];
@@ -47,17 +57,34 @@ var polygon = null;
 var placeMarkers = [];
 
 // This function takes in a COLOR, and then creates a new marker
-// icon of that color. The icon will be 21 px wide by 34 high, have an origin
-// of 0, 0 and be anchored at 10, 34).
+// icon of that color.
 function makeMarkerIcon(markerColor) {
   var markerImage = new google.maps.MarkerImage(
     'http://chart.googleapis.com/chart?chst=d_map_spin&chld=1.15|0|'+ markerColor +
     '|40|_|%E2%80%A2',
-    new google.maps.Size(21, 34),
-    new google.maps.Point(0, 0),
-    new google.maps.Point(10, 34),
-    new google.maps.Size(21,34));
+    new google.maps.Size(43, 77),   // Size
+    new google.maps.Point(0, 0),    // Origin
+    new google.maps.Point(12.5, 40),  // Anchor
+    new google.maps.Size(25, 40));  // scaledSize
   return markerImage;
+}
+
+// This function will loop through the markers array and display them all.
+function showListings() {
+  var bounds = new google.maps.LatLngBounds();
+  // Extend the boundaries of the map for each marker and display the marker
+  for (var i = 0; i < markers.length; i++) {
+    markers[i].setMap(map);
+    bounds.extend(markers[i].position);
+  }
+  map.fitBounds(bounds);
+}
+
+// This function will loop through the listings and hide them all.
+function hideMarkers(markers) {
+  for (var i = 0; i < markers.length; i++) {
+    markers[i].setMap(null);
+  }
 }
 
 function initMap() {
@@ -99,11 +126,11 @@ function initMap() {
   });
 
   // Style the markers a bit. This will be our listing marker icon.
-  var defaultIcon = makeMarkerIcon('0275d8');
+  var defaultIcon = makeMarkerIcon('ff6666');
 
   // Create a "highlighted location" marker color for when the user
   // mouses over the marker.
-  var highlightedIcon = makeMarkerIcon('ff2b2b');
+  var highlightedIcon = makeMarkerIcon('0275d8');
 
   // The following group uses the locations array to create an array of markers on initialize.
   for (var i = 0; i < locations.length; i++) {
@@ -116,7 +143,7 @@ function initMap() {
       title: title,
       animation: google.maps.Animation.DROP,
       icon: defaultIcon,
-      id: i
+      id: i,
     });
     // Push the marker to our array of markers.
     markers.push(marker);
@@ -233,25 +260,6 @@ function populateInfoWindow(marker, infowindow) {
   }
 }
 
-// This function will loop through the markers array and display them all.
-function showListings() {
-  var bounds = new google.maps.LatLngBounds();
-  // Extend the boundaries of the map for each marker and display the marker
-  for (var i = 0; i < markers.length; i++) {
-    markers[i].setMap(map);
-    bounds.extend(markers[i].position);
-  }
-  map.fitBounds(bounds);
-}
-
-// This function will loop through the listings and hide them all.
-function hideMarkers(markers) {
-  for (var i = 0; i < markers.length; i++) {
-    markers[i].setMap(null);
-  }
-}
-
-
 
 // This shows and hides (respectively) the drawing options.
 function toggleDrawing(drawingManager) {
@@ -265,6 +273,7 @@ function toggleDrawing(drawingManager) {
     drawingManager.setMap(map);
   }
 }
+
 // This function hides all markers outside the polygon,
 // and shows only the ones within it. This is so that the
 // user can specify an exact area of search.
@@ -346,6 +355,7 @@ function searchWithinTime() {
     });
   }
 }
+
 // This function will go through each of the results, and,
 // if the distance is LESS than the value in the picker, show it on the map.
 function displayMarkersWithinTime(response) {
@@ -540,7 +550,7 @@ function getPlacesDetails(marker, infowindow) {
       }
       if (place.photos) {
         innerHTML += '<br><br><img src="' + place.photos[0].getUrl(
-            {maxHeight: 100, maxWidth: 200}) + '">';
+            {maxHeight: 200, maxWidth: 400}) + '">';
       }
       innerHTML += '</div>';
       infowindow.setContent(innerHTML);
@@ -551,14 +561,4 @@ function getPlacesDetails(marker, infowindow) {
       });
     }
   });
-}
-
-function openSideBar() {
-    document.getElementById("options-box").style.left = "0px";
-    document.getElementById("map").style.left = "360px";
-}
-
-function closeSideBar() {
-    document.getElementById("options-box").style.left = "-250px";
-    document.getElementById("map").style.left = "110px";
 }
