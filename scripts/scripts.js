@@ -51,7 +51,7 @@ function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 40.7413549, lng: -73.9980244},
     zoom: 13,
-    mapTypeControl: false
+    mapTypeControl: true
   });
 
   // This autocomplete is for use in the search within time entry box.
@@ -71,6 +71,7 @@ function initMap() {
   searchBox.bindTo('bounds', map);
 
   var largeInfowindow = new google.maps.InfoWindow();
+
   // Initialize the drawing manager.
   var drawingManager = new google.maps.drawing.DrawingManager({
     drawingMode: google.maps.drawing.OverlayType.POLYGON,
@@ -82,6 +83,7 @@ function initMap() {
       ]
     }
   });
+
   // Style the markers a bit. This will be our listing marker icon.
   var defaultIcon = makeMarkerIcon('0275d8');
 
@@ -89,7 +91,7 @@ function initMap() {
   // mouses over the marker.
   var highlightedIcon = makeMarkerIcon('ff2b2b');
 
-  // The following group uses the location array to create an array of markers on initialize.
+  // The following group uses the locations array to create an array of markers on initialize.
   for (var i = 0; i < locations.length; i++) {
     // Get the position from the location array.
     var position = locations[i].location;
@@ -100,39 +102,33 @@ function initMap() {
       title: title,
       animation: google.maps.Animation.DROP,
       icon: defaultIcon,
-      id: i
+      // id: i
     });
     // Push the marker to our array of markers.
     markers.push(marker);
+
     // Create an onclick event to open the large infowindow at each marker.
     marker.addListener('click', function() {
       populateInfoWindow(this, largeInfowindow);
     });
+
     // Two event listeners - one for mouseover, one for mouseout,
     // to change the colors back and forth.
     marker.addListener('mouseover', function() {
       this.setIcon(highlightedIcon);
     });
+
     marker.addListener('mouseout', function() {
       this.setIcon(defaultIcon);
     });
   }
 
-  document.getElementById('show-listings').addEventListener('click', showListings);
-  document.getElementById('hide-listings').addEventListener('click', function() {
-    hideMarkers(markers);
-  });
-  document.getElementById('toggle-drawing').addEventListener('click', function() {
-    toggleDrawing(drawingManager);
-  });
-  // document.getElementById('zoom-to-area').addEventListener('click', function() {
-  //   zoomToArea();
-  // });
-  document.getElementById('zoom-to-area').addEventListener('click', zoomToArea);
-  document.getElementById('search-within-time').addEventListener('click', function() {
-    searchWithinTime();
-  });
-  document.getElementById('go-places').addEventListener('click', textSearchPlaces);
+  $('#show-listings').click(showListings);
+  $('#hide-listings').click(function(){hideMarkers(markers);});
+  $('#toggle-drawing').click(function(){toggleDrawing(drawingManager);});
+  $('#zoom-to-area').click(zoomToArea);
+  $('#search-within-time').click(function(){searchWithinTime();});
+  $('#go-places').click(textSearchPlaces);
 
   // Adding search-upon-enter for zoom-to-area-text field
   $('#zoom-to-area-text').keypress(function(e){
@@ -144,7 +140,7 @@ function initMap() {
   // Adding search-upon-enter for search-within-time-text field
   $('#search-within-time-text').keypress(function(e){
         if(e.which == 13){  // Enter key pressed
-            $('#search-within-time').click();  // Trigger search button click event
+            $('#search-within-time').click();
         }
     });
 
@@ -153,8 +149,6 @@ function initMap() {
   searchBox.addListener('places_changed', function() {
     searchBoxPlaces(this);
   });
-
-
 
   // Add an event listener so that the polygon is captured,  call the
   // searchWithinPolygon function. This will show the markers in the polygon,
@@ -224,6 +218,7 @@ function populateInfoWindow(marker, infowindow) {
     infowindow.open(map, marker);
   }
 }
+
 // This function will loop through the markers array and display them all.
 function showListings() {
   var bounds = new google.maps.LatLngBounds();
@@ -234,12 +229,14 @@ function showListings() {
   }
   map.fitBounds(bounds);
 }
+
 // This function will loop through the listings and hide them all.
 function hideMarkers(markers) {
   for (var i = 0; i < markers.length; i++) {
     markers[i].setMap(null);
   }
 }
+
 // This function takes in a COLOR, and then creates a new marker
 // icon of that color. The icon will be 21 px wide by 34 high, have an origin
 // of 0, 0 and be anchored at 10, 34).
