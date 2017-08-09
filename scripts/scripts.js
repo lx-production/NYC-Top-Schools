@@ -9,38 +9,13 @@ function closeSideBar() {
 }
 
 // Getting schools' names and lat, long coordinates from Google's JSONs
-// 24 schools total
 var locations = [];
-$.getJSON('elementary-schools.json', function(data){
-  for (var i = 0; i < 6; i++) {  // Only using 6 schools
-    var elemSchoolsObj = {};
-    elemSchoolsObj.title = data.results[i].name;
-    elemSchoolsObj.location = data.results[i].geometry.location;
-    locations.push(elemSchoolsObj);
-  }
-});
-$.getJSON('middle-schools.json', function(data){
-  for (var i = 0; i < 6; i++) {
-    var midSchoolsObj = {};
-    midSchoolsObj.title = data.results[i].name;
-    midSchoolsObj.location = data.results[i].geometry.location;
-    locations.push(midSchoolsObj);
-  }
-});
-$.getJSON('high-schools.json', function(data){
-  for (var i = 0; i < 6; i++) {
-    var hiSchoolsObj = {};
-    hiSchoolsObj.title = data.results[i].name;
-    hiSchoolsObj.location = data.results[i].geometry.location;
-    locations.push(hiSchoolsObj);
-  }
-});
-$.getJSON('colleges.json', function(data){
-  for (var i = 0; i < 6; i++) {
-    var collegesObj = {};
-    collegesObj.title = data.results[i].name;
-    collegesObj.location = data.results[i].geometry.location;
-    locations.push(collegesObj);
+$.getJSON('/locations.json', function(data){
+  for (var i = 0; i < data.length; i++) {
+    var schools = {};
+    schools.title = data[i].title;
+    schools.location = data[i].location;
+    locations.push(schools);
   }
 });
 
