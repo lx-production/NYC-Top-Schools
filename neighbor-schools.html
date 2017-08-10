@@ -15,6 +15,16 @@
 
   <body>
     <div class="container-test">
+      <div class="locations_sidebar">
+        <div>
+          <input class="form-control filter" placeholder="Filter locations" data-bind="textInput: filter" />
+          <div class="menu_icon" onclick="menuIcon(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </div>
+      </div>
       <div id="options-box" class="options-box">
         <h1>Top Schools in NYC</h1>
         <div>
@@ -64,7 +74,7 @@
 
     <script async defer
         src=
-        "https://maps.googleapis.com/maps/api/js?libraries=places,geometry,drawing&key=AIzaSyAGHLbKTx0QeaOW2bmQZLUIP1r9v_ROgC8&v=3&callback=initMap">
+        "https://maps.googleapis.com/maps/api/js?libraries=places,geometry,drawing&key=AIzaSyAGHLbKTx0QeaOW2bmQZLUIP1r9v_ROgC8&v=3&callback=initMap" onerror="mapError()">
     </script>
 
   </body>

@@ -1,3 +1,7 @@
+function menuIcon(x) {
+    x.classList.toggle("change");
+}
+
 function openSideBar() {
     document.getElementById("options-box").style.left = "0px";
 }
@@ -116,10 +120,34 @@ function initMap() {
       icon: defaultIcon,
       id: i,
     });
+    // Push the newly created marker's to the locations property
+    locations[i].marker = marker;
     markers.push(marker);
     marker.addListener('click', function() {populateInfoWindow(this, largeInfowindow);});
     marker.addListener('mouseover', function() {this.setIcon(highlightedIcon);});
     marker.addListener('mouseout', function() {this.setIcon(defaultIcon);});
+  }
+  // Using KnockOutJS for filtering function
+  function knockOutJsVM() {
+    var self = this;
+    self.locations = ko.observableArray(locations);
+    self.filter = ko.observable('');
+    self.filtered = ko.computed(function(){
+      var filter = self.filter().toLowerCase();
+      if (!filter) { // If no filter was entered by user, show all locations
+        for (marker in self.locations()) {
+          self.locations()[marker].marker.setVisible(true);
+        }
+        return self.locations();
+      }
+      else { // Show only the filtered locations
+        return ko.utils.arrayFilter(self.locations(), function(item){
+          var result = (item.title.toLowerCase().search(filter) >= 0); // result = True or False?
+          item.marker.setVisible(result);
+          return result;
+        });
+      }
+    });
   }
 
   $('#show-listings').click(showListings);
@@ -519,4 +547,9 @@ function getPlacesDetails(marker, infowindow) {
       });
     }
   });
+}
+
+// Map loading error handle
+function mapError(){
+    alert("Error loading Google Map. Try refresing the page");
 }
