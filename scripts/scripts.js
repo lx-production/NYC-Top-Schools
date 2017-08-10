@@ -3,7 +3,7 @@ function openSideBar() {
 }
 
 function closeSideBar() {
-    document.getElementById("options-box").style.left = "-250px";
+    document.getElementById("options-box").style.left = "-310px";
 }
 
 // Getting schools' names and lat, long coordinates from Google's JSONs
