@@ -64,6 +64,35 @@ function hideMarkers(markers) {
   }
 }
 
+// Using KnockOutJS for filtering function
+function KnockOutJsVM() {
+  var self = this;
+  self.locations = ko.observableArray(locations);
+  self.filter = ko.observable('');
+  self.filtered = ko.computed(function(){
+    var filter = self.filter().toLowerCase();
+    if (!filter) { // If no filter was entered by user, show all locations
+      ko.utils.arrayForEach(self.locations(), function(item){
+        item.marker.setVisible(true);
+      });
+      return self.locations();
+    }
+    else { // Show only the filtered locations
+      return ko.utils.arrayFilter(self.locations(), function(item){
+        var result = (item.title.toLowerCase().search(filter) >= 0);
+        // result = True or False?
+        item.marker.setVisible(result);
+        return result;
+      });
+    }
+  }, self);
+
+  self.placeClick = function(clicked) {
+    clicked.marker.setIcon(highlightedIcon);
+    populateInfoWindow(location.marker, largeInfowindow);
+  };
+}
+
 function initMap() {
   // Constructor creates a new map - only center and zoom are required.
   map = new google.maps.Map(document.getElementById('map'), {
@@ -127,28 +156,9 @@ function initMap() {
     marker.addListener('mouseover', function() {this.setIcon(highlightedIcon);});
     marker.addListener('mouseout', function() {this.setIcon(defaultIcon);});
   }
-  // Using KnockOutJS for filtering function
-  function knockOutJsVM() {
-    var self = this;
-    self.locations = ko.observableArray(locations);
-    self.filter = ko.observable('');
-    self.filtered = ko.computed(function(){
-      var filter = self.filter().toLowerCase();
-      if (!filter) { // If no filter was entered by user, show all locations
-        for (marker in self.locations()) {
-          self.locations()[marker].marker.setVisible(true);
-        }
-        return self.locations();
-      }
-      else { // Show only the filtered locations
-        return ko.utils.arrayFilter(self.locations(), function(item){
-          var result = (item.title.toLowerCase().search(filter) >= 0); // result = True or False?
-          item.marker.setVisible(result);
-          return result;
-        });
-      }
-    });
-  }
+
+  // Apply KnockOutJS
+  ko.applyBindings(new KnockOutJsVM());
 
   $('#show-listings').click(showListings);
   $('#hide-listings').click(function(){hideMarkers(markers);});

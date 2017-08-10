@@ -16,14 +16,19 @@
   <body>
     <div class="container-test">
       <div class="locations_sidebar">
-        <div>
-          <input class="form-control filter" placeholder="Filter locations" data-bind="textInput: filter" />
+          <input class="form-control filter" placeholder="Filter locations. Ex: Highschools" data-bind="textInput: filter" />
           <div class="menu_icon" onclick="menuIcon(this)">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
           </div>
-        </div>
+          <div class="locations">
+            <ul data-bind="foreach: filtered">
+              <li class="locations_li" data-bind="text: title, click: $parent.placeClick">
+                <!-- KnockOutJS magic -->
+              </li>
+            </ul>
+          </div>
       </div>
       <div id="options-box" class="options-box">
         <h1>Top Schools in NYC</h1>
