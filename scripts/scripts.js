@@ -1,11 +1,9 @@
 function openSideBar() {
     document.getElementById("options-box").style.left = "0px";
-    document.getElementById("map").style.left = "360px";
 }
 
 function closeSideBar() {
     document.getElementById("options-box").style.left = "-250px";
-    document.getElementById("map").style.left = "110px";
 }
 
 // Getting schools' names and lat, long coordinates from Google's JSONs

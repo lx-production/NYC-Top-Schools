@@ -13,6 +13,7 @@ input {
   font-size: 12px;
 }
 h1 {
+  font-family: 'Slabo 27px', serif;
   color: #525454;
   font-size: 40px;
   margin: 0 0 10px 0;
@@ -30,11 +31,12 @@ hr {
 #map {
   bottom:0px;
   height: 100%;
-  left: 360px;
+  left: 0px;
   position: absolute;
   right: 0px;
 }
 .options-box {
+  top: 50px;
   position: absolute;
   z-index: 1;
   background: #fff;
