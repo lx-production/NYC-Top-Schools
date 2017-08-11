@@ -4,6 +4,7 @@ function menuIcon(x) {
     menuIconState = document.getElementById("menu_icon").classList.contains("change");
     if (menuIconState) { // True or False?
       document.getElementById("right_sidebar").style.height = "100%"; // if True
+      document.getElementById("right_sidebar").style.transition = "0.5s";
     } else {
       document.getElementById("right_sidebar").style.height = "60px"; // if False
     }
@@ -12,11 +13,13 @@ function menuIcon(x) {
 // Expand left sidebar function
 function openSideBar() {
     document.getElementById("options-box").style.left = "0px";
+    document.getElementById("options-box").style.transition = "0.5s";
 }
 
 // Collapse left sidebar function
 function closeSideBar() {
     document.getElementById("options-box").style.left = "-310px";
+    document.getElementById("options-box").style.transition = "0.5s";
 }
 
 // Getting schools' names and lat, long coordinates from Google's JSONs
