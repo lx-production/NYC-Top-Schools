@@ -1,17 +1,20 @@
+// Hide/Show right sidebar function
 function menuIcon(x) {
     x.classList.toggle("change");
     menuIconState = document.getElementById("menu_icon").classList.contains("change");
-    if (menuIconState){
-      document.getElementById("right_sidebar").style.height = "100%";
+    if (menuIconState) { // True or False?
+      document.getElementById("right_sidebar").style.height = "100%"; // if True
     } else {
-      document.getElementById("right_sidebar").style.height = "60px";
+      document.getElementById("right_sidebar").style.height = "60px"; // if False
     }
 }
 
+// Expand left sidebar function
 function openSideBar() {
     document.getElementById("options-box").style.left = "0px";
 }
 
+// Collapse left sidebar function
 function closeSideBar() {
     document.getElementById("options-box").style.left = "-310px";
 }
@@ -75,7 +78,7 @@ function KnockOutJsVM() {
   var self = this;
   self.locations = ko.observableArray(locations);
   self.filter = ko.observable('');
-  self.filtered = ko.computed(function(){
+  self.filtered = ko.computed(function() {
     var filter = self.filter().toLowerCase();
     if (!filter) { // If no filter was entered by user, show all locations
       ko.utils.arrayForEach(self.locations(), function(item){
@@ -86,16 +89,20 @@ function KnockOutJsVM() {
     else { // Show only the filtered locations
       return ko.utils.arrayFilter(self.locations(), function(item){
         var result = (item.title.toLowerCase().search(filter) >= 0);
-        // result = True or False?
+        // result is always true if user type something in
         item.marker.setVisible(result);
         return result;
       });
     }
   }, self);
 
+  // Toggle markers Bounce animation when user clicks school in the list
   self.placeClick = function(clicked) {
-    clicked.marker.setIcon(highlightedIcon);
-    populateInfoWindow(location.marker, largeInfowindow);
+    if (clicked.marker.getAnimation() !== null) {
+      clicked.marker.setAnimation(null);
+    } else {
+      clicked.marker.setAnimation(google.maps.Animation.BOUNCE);
+    }
   };
 }
 
@@ -567,5 +574,5 @@ function getPlacesDetails(marker, infowindow) {
 
 // Map loading error handle
 function mapError(){
-    alert("Error loading Google Map. Try refresing the page");
+    alert("Error loading Google Map. Check your internet connection");
 }

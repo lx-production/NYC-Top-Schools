@@ -57,6 +57,7 @@ hr {
 
 .locations_sidebar {
   right: 0px;
+  top: 40px;
   position: absolute;
   z-index: 1;
   background: rgba(228, 228, 228, 0.65);
