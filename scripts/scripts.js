@@ -1,5 +1,11 @@
 function menuIcon(x) {
     x.classList.toggle("change");
+    menuIconState = document.getElementById("menu_icon").classList.contains("change");
+    if (menuIconState){
+      document.getElementById("right_sidebar").style.height = "100%";
+    } else {
+      document.getElementById("right_sidebar").style.height = "60px";
+    }
 }
 
 function openSideBar() {
