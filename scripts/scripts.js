@@ -1,3 +1,48 @@
+var yelpToken = {  // This was returned by Yelp's api
+    "access_token": "idDL1CnoBdImHLJDs47gZd-M1DOTT9n8ohJGOkHLBgzQImhg2g01apfxlyuwdw3_J90YAatjqtfY05wxoQa1wdX_I-wtu1Ip06DrfBcpQvdPTSymkhHrqrHLSSSOWXYx",
+    "expires_in": 15541272,
+    "token_type": "Bearer"
+};
+
+var yelpAPI = {
+  "clientId": "VDBwt4UekLscXB0EYgLdMA",
+  "clientSecret": "Up3hIIu55452mnHkpLkbpHPVF0xMkQzTa8jzBq7UTv9fdgeafqgby7x1vX3jl9P2"
+};
+
+var yelpPhoneSearch = "https://api.yelp.com/v3/businesses/search/phone?phone=";
+var cors_anywhere_url = 'https://cors-anywhere.herokuapp.com/';  // Yelp v3 api doesn't support CORS, need to use this 3rd party proxy service
+
+// var yelpAPICall = {
+//   "async": true,
+//   "crossDomain": true,
+//   "url": cors_anywhere_url + yelpPhoneSearch + locations.phone,
+//   "method": "GET",
+//   "headers": {
+//     "authorization": "Bearer idDL1CnoBdImHLJDs47gZd-M1DOTT9n8ohJGOkHLBgzQImhg2g01apfxlyuwdw3_J90YAatjqtfY05wxoQa1wdX_I-wtu1Ip06DrfBcpQvdPTSymkhHrqrHLSSSOWXYx",
+//     "cache-control": "public, max-age=31536000",
+//   }
+// };
+
+
+
+// $.ajax({
+//   "async": true,
+//   "crossDomain": true,
+//   "url": cors_anywhere_url + yelpPhoneSearch + "+12126310543",
+//   "method": "GET",
+//   "headers": {
+//     "authorization": "Bearer idDL1CnoBdImHLJDs47gZd-M1DOTT9n8ohJGOkHLBgzQImhg2g01apfxlyuwdw3_J90YAatjqtfY05wxoQa1wdX_I-wtu1Ip06DrfBcpQvdPTSymkhHrqrHLSSSOWXYx",
+//     "cache-control": "public, max-age=31536000",
+//   }
+// }).done(function(response){
+//     console.log(response); // the response has the access_token
+// }).fail(function(error){
+//     console.log("An error occured in getting Yelp access token!");
+// });
+
+
+
+
 // Hide/Show right sidebar function
 function menuIcon(x) {
     x.classList.toggle("change");
@@ -29,9 +74,28 @@ $.getJSON('/locations.json', function(data){
     var schools = {};
     schools.title = data[i].title;
     schools.location = data[i].location;
+    schools.phone = data[i].phone;
     locations.push(schools);
   }
 });
+
+// 
+for (var i = 0; i < locations.length; i++) {
+  $.ajax({
+    "async": true,
+    "crossDomain": true,
+    "url": cors_anywhere_url + yelpPhoneSearch + locations.phone,
+    "method": "GET",
+    "headers": {
+      "authorization": "Bearer idDL1CnoBdImHLJDs47gZd-M1DOTT9n8ohJGOkHLBgzQImhg2g01apfxlyuwdw3_J90YAatjqtfY05wxoQa1wdX_I-wtu1Ip06DrfBcpQvdPTSymkhHrqrHLSSSOWXYx",
+      "cache-control": "public, max-age=31536000",
+    }
+  }).done(function(response){
+      console.log(response); // the response has the access_token
+  }).fail(function(error){
+      console.log("An error occured in getting Yelp access token!");
+  });
+}
 
 var map;
 
