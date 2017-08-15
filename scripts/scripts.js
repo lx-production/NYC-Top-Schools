@@ -1,4 +1,4 @@
-var yelpToken = {  // This was returned by Yelp's api
+var yelpToken = {  // This was returned by Yelp's api v3
     "access_token": "idDL1CnoBdImHLJDs47gZd-M1DOTT9n8ohJGOkHLBgzQImhg2g01apfxlyuwdw3_J90YAatjqtfY05wxoQa1wdX_I-wtu1Ip06DrfBcpQvdPTSymkhHrqrHLSSSOWXYx",
     "expires_in": 15541272,
     "token_type": "Bearer"
@@ -10,7 +10,9 @@ var yelpAPI = {
 };
 
 var yelpPhoneSearch = "https://api.yelp.com/v3/businesses/search/phone?phone=";
-var cors_anywhere_url = 'https://cors-anywhere.herokuapp.com/';  // Yelp v3 api doesn't support CORS, need to use this 3rd party proxy service
+
+// Yelp v3 api doesn't support CORS, need to use this 3rd party proxy service
+var cors_anywhere_url = "https://cors-anywhere.herokuapp.com/";
 
 // Hide/Show right sidebar function
 function menuIcon(x) {
@@ -88,12 +90,9 @@ function initMap() {
   });
 
   // Getting schools' names and lat, long coordinates from Google's JSONs
-  var locations = [];
   $.getJSON('/locations.json').then(data =>
-      Promise.all(data.map(school =>
-          $.ajax({
-              "async": true,
-              "crossDomain": true,
+      Promise.all(data.map(school =>   //  map() method creates a new array with the results of calling a provided function on every element in the calling array
+          $.ajax({  // ajax is asynchrorous by default
               "url": cors_anywhere_url + yelpPhoneSearch + school.phone,
               "method": "GET",
               "headers": {
@@ -107,6 +106,9 @@ function initMap() {
               rating: response.businesses[0].rating,
               url: response.businesses[0].url
           }))
+          .fail(function(){
+            console.log("Can't fetch data from Yelp. Check your internet connection");
+          })
       ))
   ).then(function(value) {
       // The following group uses the locations array to create an array of markers on initialize.
@@ -121,7 +123,7 @@ function initMap() {
           id: i,
         });
         value[i].marker = marker;  // Create marker property for each marker, connected to KnockOutJS
-        markers.push(marker);  // Push the newly created marker's to the locations property
+        markers.push(marker);  // Push the newly created marker's to the markers array
         marker.addListener('click', function() {populateInfoWindow(this, largeInfowindow);});
         marker.addListener('mouseover', function() {this.setIcon(highlightedIcon);});
         marker.addListener('mouseout', function() {this.setIcon(defaultIcon);});
