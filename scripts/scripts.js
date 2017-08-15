@@ -12,37 +12,6 @@ var yelpAPI = {
 var yelpPhoneSearch = "https://api.yelp.com/v3/businesses/search/phone?phone=";
 var cors_anywhere_url = 'https://cors-anywhere.herokuapp.com/';  // Yelp v3 api doesn't support CORS, need to use this 3rd party proxy service
 
-// var yelpAPICall = {
-//   "async": true,
-//   "crossDomain": true,
-//   "url": cors_anywhere_url + yelpPhoneSearch + locations.phone,
-//   "method": "GET",
-//   "headers": {
-//     "authorization": "Bearer idDL1CnoBdImHLJDs47gZd-M1DOTT9n8ohJGOkHLBgzQImhg2g01apfxlyuwdw3_J90YAatjqtfY05wxoQa1wdX_I-wtu1Ip06DrfBcpQvdPTSymkhHrqrHLSSSOWXYx",
-//     "cache-control": "public, max-age=31536000",
-//   }
-// };
-
-
-
-// $.ajax({
-//   "async": true,
-//   "crossDomain": true,
-//   "url": cors_anywhere_url + yelpPhoneSearch + "+12126310543",
-//   "method": "GET",
-//   "headers": {
-//     "authorization": "Bearer idDL1CnoBdImHLJDs47gZd-M1DOTT9n8ohJGOkHLBgzQImhg2g01apfxlyuwdw3_J90YAatjqtfY05wxoQa1wdX_I-wtu1Ip06DrfBcpQvdPTSymkhHrqrHLSSSOWXYx",
-//     "cache-control": "public, max-age=31536000",
-//   }
-// }).done(function(response){
-//     console.log(response); // the response has the access_token
-// }).fail(function(error){
-//     console.log("An error occured in getting Yelp access token!");
-// });
-
-
-
-
 // Hide/Show right sidebar function
 function menuIcon(x) {
     x.classList.toggle("change");
@@ -65,36 +34,6 @@ function openSideBar() {
 function closeSideBar() {
     document.getElementById("options-box").style.left = "-310px";
     document.getElementById("options-box").style.transition = "0.5s";
-}
-
-// Getting schools' names and lat, long coordinates from Google's JSONs
-var locations = [];
-$.getJSON('/locations.json', function(data){
-  for (var i = 0; i < data.length; i++) {
-    var schools = {};
-    schools.title = data[i].title;
-    schools.location = data[i].location;
-    schools.phone = data[i].phone;
-    locations.push(schools);
-  }
-});
-
-// 
-for (var i = 0; i < locations.length; i++) {
-  $.ajax({
-    "async": true,
-    "crossDomain": true,
-    "url": cors_anywhere_url + yelpPhoneSearch + locations.phone,
-    "method": "GET",
-    "headers": {
-      "authorization": "Bearer idDL1CnoBdImHLJDs47gZd-M1DOTT9n8ohJGOkHLBgzQImhg2g01apfxlyuwdw3_J90YAatjqtfY05wxoQa1wdX_I-wtu1Ip06DrfBcpQvdPTSymkhHrqrHLSSSOWXYx",
-      "cache-control": "public, max-age=31536000",
-    }
-  }).done(function(response){
-      console.log(response); // the response has the access_token
-  }).fail(function(error){
-      console.log("An error occured in getting Yelp access token!");
-  });
 }
 
 var map;
@@ -140,45 +79,87 @@ function hideMarkers(markers) {
   }
 }
 
-// Using KnockOutJS for filtering function
-function KnockOutJsVM() {
-  var self = this;
-  self.locations = ko.observableArray(locations);
-  self.filter = ko.observable('');
-  self.filtered = ko.computed(function() {
-    var filter = self.filter().toLowerCase();
-    if (!filter) { // If no filter was entered by user, show all locations
-      ko.utils.arrayForEach(self.locations(), function(item){
-        item.marker.setVisible(true);
-      });
-      return self.locations();
-    }
-    else { // Show only the filtered locations
-      return ko.utils.arrayFilter(self.locations(), function(item){
-        var result = (item.title.toLowerCase().search(filter) >= 0);
-        // result is always true if user type something in
-        item.marker.setVisible(result);
-        return result;
-      });
-    }
-  }, self);
-
-  // Toggle markers Bounce animation when user clicks school in the list
-  self.placeClick = function(clicked) {
-    if (clicked.marker.getAnimation() !== null) {
-      clicked.marker.setAnimation(null);
-    } else {
-      clicked.marker.setAnimation(google.maps.Animation.BOUNCE);
-    }
-  };
-}
-
 function initMap() {
   // Constructor creates a new map - only center and zoom are required.
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 40.7413549, lng: -73.9980244},
     zoom: 13,
     mapTypeControl: true
+  });
+
+  // Getting schools' names and lat, long coordinates from Google's JSONs
+  var locations = [];
+  $.getJSON('/locations.json').then(data =>
+      Promise.all(data.map(school =>
+          $.ajax({
+              "async": true,
+              "crossDomain": true,
+              "url": cors_anywhere_url + yelpPhoneSearch + school.phone,
+              "method": "GET",
+              "headers": {
+                  "authorization": "Bearer " + yelpToken.access_token,
+                  "cache-control": "public, max-age=31536000",
+              }
+          }).then(response => ({
+              title: school.title,
+              location: school.location,
+              phone: school.phone,
+              rating: response.businesses[0].rating
+          }))
+      ))
+  ).then(function(value) {
+      // The following group uses the locations array to create an array of markers on initialize.
+      for (var i = 0; i < value.length; i++) {
+        var position = value[i].location;
+        var title = value[i].title;
+        var marker = new google.maps.Marker({
+          position: position,
+          title: title,
+          animation: google.maps.Animation.DROP,
+          icon: defaultIcon,
+          id: i,
+        });
+        // Push the newly created marker's to the locations property
+        value[i].marker = marker;
+        markers.push(marker);
+        marker.addListener('click', function() {populateInfoWindow(this, largeInfowindow);});
+        marker.addListener('mouseover', function() {this.setIcon(highlightedIcon);});
+        marker.addListener('mouseout', function() {this.setIcon(defaultIcon);});
+      }
+      // Using KnockOutJS for filtering function
+      function KnockOutJsVM() {
+        var self = this;
+        self.locations = ko.observableArray(value);
+        self.filter = ko.observable('');
+        self.filtered = ko.computed(function() {
+          var filter = self.filter().toLowerCase();
+          if (!filter) { // If no filter was entered by user, show all locations
+            ko.utils.arrayForEach(self.locations(), function(item){
+              item.marker.setVisible(true);
+            });
+            return self.locations();
+          }
+          else { // Show only the filtered locations
+            return ko.utils.arrayFilter(self.locations(), function(item){
+              var result = (item.title.toLowerCase().search(filter) >= 0);
+              // result is always true if user type something in
+              item.marker.setVisible(result);
+              return result;
+            });
+          }
+        }, self);
+
+        // Toggle markers Bounce animation when user clicks school in the list
+        self.placeClick = function(clicked) {
+          if (clicked.marker.getAnimation() !== null) {
+            clicked.marker.setAnimation(null);
+          } else {
+            clicked.marker.setAnimation(google.maps.Animation.BOUNCE);
+          }
+        };
+      }
+      // Apply KnockOutJS
+      ko.applyBindings(new KnockOutJsVM());
   });
 
   // This autocomplete is for use in the search within time entry box.
@@ -217,28 +198,6 @@ function initMap() {
   // Create a "highlighted location" marker color for when the user
   // mouses over the marker.
   var highlightedIcon = makeMarkerIcon('0275d8');
-
-  // The following group uses the locations array to create an array of markers on initialize.
-  for (var i = 0; i < locations.length; i++) {
-    var position = locations[i].location;
-    var title = locations[i].title;
-    var marker = new google.maps.Marker({
-      position: position,
-      title: title,
-      animation: google.maps.Animation.DROP,
-      icon: defaultIcon,
-      id: i,
-    });
-    // Push the newly created marker's to the locations property
-    locations[i].marker = marker;
-    markers.push(marker);
-    marker.addListener('click', function() {populateInfoWindow(this, largeInfowindow);});
-    marker.addListener('mouseover', function() {this.setIcon(highlightedIcon);});
-    marker.addListener('mouseout', function() {this.setIcon(defaultIcon);});
-  }
-
-  // Apply KnockOutJS
-  ko.applyBindings(new KnockOutJsVM());
 
   $('#show-listings').click(showListings);
   $('#hide-listings').click(function(){hideMarkers(markers);});
