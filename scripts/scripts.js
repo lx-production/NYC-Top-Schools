@@ -90,7 +90,7 @@ function initMap() {
   });
 
   // Getting schools' names and lat, long coordinates from Google's JSONs
-  $.getJSON('/locations.json').then(data =>
+  $.getJSON('/locations.json').then(data =>  // data is the result of getJSON
       Promise.all(data.map(school =>   //  map() method creates a new array with the results of calling a provided function on every element in the calling array
           $.ajax({  // ajax is asynchrorous by default
               "url": cors_anywhere_url + yelpPhoneSearch + school.phone,
@@ -110,7 +110,8 @@ function initMap() {
             console.log("Can't fetch data from Yelp. Check your internet connection");
           })
       ))
-  ).then(function(value) {
+  ).then(function(value) {  // What to do with value after getJSON, ajax call, and mapping the ajax response
+      // value is the array returned from the above codes, and is used to create markers below
       // The following group uses the locations array to create an array of markers on initialize.
       for (var i = 0; i < value.length; i++) {
         var marker = new google.maps.Marker({
@@ -122,7 +123,7 @@ function initMap() {
           icon: defaultIcon,
           id: i,
         });
-        value[i].marker = marker;  // Create marker property for each marker, connected to KnockOutJS
+        value[i].marker = marker;  // Create marker property for each marker, used by KnockOutJS
         markers.push(marker);  // Push the newly created marker's to the markers array
         marker.addListener('click', function() {populateInfoWindow(this, largeInfowindow);});
         marker.addListener('mouseover', function() {this.setIcon(highlightedIcon);});
