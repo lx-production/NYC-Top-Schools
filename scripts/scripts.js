@@ -107,7 +107,7 @@ function initMap() {
               url: response.businesses[0].url
           }))
           .fail(function(){
-            console.log("Can't fetch data from Yelp. Check your internet connection");
+            alert("Can't fetch data from Yelp. Check your internet connection");
           })
       ))
   ).then(function(value) {  // What to do with value after getJSON, ajax call, and mapping the ajax response
