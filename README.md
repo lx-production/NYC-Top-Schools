@@ -21,4 +21,5 @@ This is a single page app displaying top schools in NYC using Google Maps APIs, 
 ## Reference & Research
 
 1. [Ajax JS Promises (Stackoverflow)](https://stackoverflow.com/questions/45684805/extract-yelps-rating)
-2. [Yelp API v3 CORS issue (Udacity forum)](https://stackoverflow.com/questions/45684805/extract-yelps-rating)
+2. [Yelp API v3 CORS issue (Udacity forum)](https://discussions.udacity.com/t/yelp-v3-implementation/235928/4)
+3. [Google Maps APIs Udacity Course](https://github.com/udacity/ud864)
