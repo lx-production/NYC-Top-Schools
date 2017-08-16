@@ -99,7 +99,7 @@ function initMap() {
                   "authorization": "Bearer " + yelpToken.access_token,
                   "cache-control": "public, max-age=31536000",
               }
-          }).then(response => ({
+          }).then(response => ({ // response is the result of the ajax call above
               title: school.title,
               location: school.location,
               phone: school.phone,
