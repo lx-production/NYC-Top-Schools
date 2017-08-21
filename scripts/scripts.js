@@ -233,7 +233,7 @@ function initMap() {
   // This autocomplete is for use in the geocoder entry box.
   var zoomAutocomplete = new google.maps.places.Autocomplete(
       document.getElementById('zoom-to-area-text'));
-      // Create a searchbox in order to execute a places search
+      // Create a searchbox in order to execute nearby places search
   var searchBox = new google.maps.places.SearchBox(
       document.getElementById('places-search'));
 
@@ -551,14 +551,6 @@ function createMarkersForPlaces(places) {
     // Create a single infowindow to be used with the place details information
     // so that only one is open at once.
     var placeInfoWindow = new google.maps.InfoWindow();
-    // If a marker is clicked, do a place details search on it in the next function.
-    marker.addListener('click', function() {   // error Don't make functions within a loop
-      if (placeInfoWindow.marker == this) {
-        console.log("This infowindow already is on this marker!");
-      } else {
-        getPlacesDetails(this, placeInfoWindow);
-      }
-    });
     placeMarkers.push(marker);
     if (place.geometry.viewport) {
       // Only geocodes have viewport.
@@ -567,6 +559,18 @@ function createMarkersForPlaces(places) {
       bounds.extend(place.geometry.location);
     }
   }
+
+  placeMarkers.forEach(function(marker){
+    // If a marker is clicked, do a place details search on it in the next function.
+    marker.addListener('click', function() {
+      if (placeInfoWindow.marker == this) {
+        console.log("This infowindow already is on this marker!");
+      } else {
+        getPlacesDetails(this, placeInfoWindow);
+      }
+    });
+  });
+
   map.fitBounds(bounds);
 }
 
