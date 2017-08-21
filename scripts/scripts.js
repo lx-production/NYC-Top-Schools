@@ -125,9 +125,21 @@ function initMap() {
         });
         value[i].marker = marker;  // Create marker property for each marker, used by KnockOutJS
         markers.push(marker);  // Push the newly created marker's to the markers array
-        marker.addListener('click', function() {populateInfoWindow(this, largeInfowindow);});
-        marker.addListener('mouseover', function() {this.setIcon(highlightedIcon);});
-        marker.addListener('mouseout', function() {this.setIcon(defaultIcon);});
+        marker.addListener('click', populateThisWindow);
+        marker.addListener('mouseover', mouseover);
+        marker.addListener('mouseout', mouseout);
+      }
+
+      function populateThisWindow() {
+        populateInfoWindow(this, largeInfowindow);
+      }
+
+      function mouseover(){
+        this.setIcon(highlightedIcon);
+      }
+
+      function mouseout(){
+        this.setIcon(defaultIcon);
       }
 
       // This function populates the infowindow when the marker is clicked. We'll only allow
@@ -148,7 +160,7 @@ function initMap() {
           // In case the status is OK, which means the pano was found, compute the
           // position of the streetview image, then calculate the heading, then get a
           // panorama from that and set the options
-          function getStreetView(data, status) {
+          function getStreetView(data, status) {  // error Function declarations should not be placed in blocks. Use a function expression or move the statement to the top of the outer function.
             if (status == google.maps.StreetViewStatus.OK) {
               var nearStreetViewLocation = data.location.latLng;
               var heading = google.maps.geometry.spherical.computeHeading(
@@ -339,7 +351,7 @@ function zoomToArea() {
   var address = document.getElementById('zoom-to-area-text').value;
 
   // Make sure the address isn't blank.
-  if (address == '') {
+  if (address === '') {
     window.alert('You must enter an area, or address.');
   } else {
     // Geocode the address/area entered to get the center. Then, center the map
@@ -364,10 +376,10 @@ function zoomToArea() {
 // that are within that travel time (via that travel mode) of the location
 function searchWithinTime() {
   // Initialize the distance matrix service.
-  var distanceMatrixService = new google.maps.DistanceMatrixService;
+  var distanceMatrixService = new google.maps.DistanceMatrixService();
   var address = document.getElementById('search-within-time-text').value;
   // Check to make sure the place entered isn't blank.
-  if (address == '') {
+  if (address === '') {
     window.alert('You must enter an address.');
   } else {
     hideMarkers(markers);
@@ -452,7 +464,7 @@ function displayMarkersWithinTime(response) {
 // on the map.
 function displayDirections(origin) {
   hideMarkers(markers);
-  var directionsService = new google.maps.DirectionsService;
+  var directionsService = new google.maps.DirectionsService();
   // Get the destination address from the user entered value.
   var destinationAddress =
       document.getElementById('search-within-time-text').value;
@@ -485,7 +497,7 @@ function displayDirections(origin) {
 function searchBoxPlaces(searchBox) {
   hideMarkers(placeMarkers);
   var places = searchBox.getPlaces();
-  if (places.length == 0) {
+  if (places.length === 0) {
     window.alert('We did not find any places matching that search!');
   } else {
   // For each place, get the icon, name and location.
@@ -502,7 +514,7 @@ function textSearchPlaces() {
   // Get the address or place that the user entered.
   var search = document.getElementById('places-search').value;
   // Make sure the search isn't blank.
-  if (search == '') {
+  if (search === '') {
     window.alert('You must enter something to be searched');
   } else {
     placesService.textSearch({
@@ -540,7 +552,7 @@ function createMarkersForPlaces(places) {
     // so that only one is open at once.
     var placeInfoWindow = new google.maps.InfoWindow();
     // If a marker is clicked, do a place details search on it in the next function.
-    marker.addListener('click', function() {
+    marker.addListener('click', function() {   // error Don't make functions within a loop
       if (placeInfoWindow.marker == this) {
         console.log("This infowindow already is on this marker!");
       } else {
