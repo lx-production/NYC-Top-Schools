@@ -147,10 +147,18 @@ function initMap() {
         this.setIcon(defaultIcon);
       }
 
+      function animateMarker(marker) {
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+          setTimeout(function() {
+              marker.setAnimation(null);
+          }, 1000);
+      }
+
       // This function populates the infowindow when the marker is clicked. We'll only allow
       // one infowindow which will open at the marker that is clicked, and populate based
       // on that markers position.
       function populateInfoWindow(marker, infowindow) {
+        animateMarker(marker);
         // Check to make sure the infowindow is not already opened on this marker.
         if (infowindow.marker != marker) {
           // Clear the infowindow content to give the streetview time to load.
