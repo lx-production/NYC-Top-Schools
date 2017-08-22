@@ -71,7 +71,10 @@ function showListings() {
     markers[i].setMap(map);
     bounds.extend(markers[i].position);
   }
-  map.fitBounds(bounds);
+
+  google.maps.event.addDomListener(window, 'resize', function() {
+    map.fitBounds(bounds);
+  });  // map markers always fit on screen as user resizes their browser window
 }
 
 // This function will loop through the listings and hide them all.
