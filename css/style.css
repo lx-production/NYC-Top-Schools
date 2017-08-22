@@ -139,3 +139,11 @@ hr {
   display: inline-block;
   cursor: pointer;
 }
+
+.show-hide {
+  width: 49%;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}

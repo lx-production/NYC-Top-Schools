@@ -7,9 +7,7 @@
     <link href="icon.ico" rel="icon">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
-    <script type="text/javascript" src="/scripts/scripts.js"></script>
+
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
   </head>
 
@@ -33,13 +31,13 @@
       <div id="options-box" class="options-box">
         <h1>Top Schools in NYC</h1>
         <div>
-          <button id="show-listings" class="btn btn-primary" style="width:49%">Show Schools</button>
-          <button id="hide-listings" class="btn btn-primary" style="width:49%">Hide Schools</button>
+          <button id="show-listings" class="btn btn-primary show-hide">Show Schools</button>
+          <button id="hide-listings" class="btn btn-primary show-hide">Hide Schools</button>
           <button id="toggle-drawing" class="btn btn-primary">Draw an area to search for schools within</button>
         </div>
         <div>
           <input type="text" class="form-control" id="zoom-to-area-text" placeholder="Enter your favorite area!">
-          <button id="zoom-to-area" class="btn btn-primary" style="margin-bottom:0px">Zoom</button>
+          <button id="zoom-to-area" class="btn btn-primary mb0">Zoom</button>
         </div>
         <br>
         <div>
@@ -58,28 +56,27 @@
           </select>
           <span class="text"> of</span>
           <input type="text" class="form-control" id="search-within-time-text" placeholder="Type or paste your address here">
-          <button id="search-within-time" class="btn btn-primary" style="margin-bottom:0px">Go</button>
+          <button id="search-within-time" class="btn btn-primary mb0">Go</button>
         </div>
         <br>
         <div>
           <span class="text">Search for nearby places</span>
           <input type="text" class="form-control" id="places-search" placeholder="Ex: Starbucks">
-          <button id="go-places" class="btn btn-primary" style="margin-bottom:0px">Go</button>
+          <button id="go-places" class="btn btn-primary mb0">Go</button>
         </div>
         <br>
         <div class="sidebar">
-          <button id="collapse" class="btn btn-primary" style="width: 48%" onclick="closeSideBar()">< Collapse</button>
-          <button id="expand" class="btn btn-primary" style="width: 48%" onclick="openSideBar()">Expand ></button>
+          <button id="collapse" class="btn btn-primary show-hide" onclick="closeSideBar()">< Collapse</button>
+          <button id="expand" class="btn btn-primary show-hide" onclick="openSideBar()">Expand ></button>
         </div>
       </div>
       <div id="map"></div>
     </div>
 
-
-
-    <script async defer
-        src=
-        "https://maps.googleapis.com/maps/api/js?libraries=places,geometry,drawing&key=AIzaSyAGHLbKTx0QeaOW2bmQZLUIP1r9v_ROgC8&v=3&callback=initMap" onerror="mapError()">
+    <script async src="https://code.jquery.com/jquery-3.2.1.min.js" onerror="scriptsLoadError()"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js" onerror="scriptsLoadError()"></script>
+    <script defer src="/scripts/scripts.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry,drawing&key=AIzaSyAGHLbKTx0QeaOW2bmQZLUIP1r9v_ROgC8&v=3&callback=initMap" onerror="scriptsLoadError()">
     </script>
 
   </body>

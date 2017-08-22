@@ -622,6 +622,6 @@ function getPlacesDetails(marker, infowindow) {
 }
 
 // Map loading error handle
-function mapError(){
-    alert("Error loading Google Map. Check your internet connection");
+function scriptsLoadError(){
+    alert("Error loading scripts. Check your internet connection");
 }
