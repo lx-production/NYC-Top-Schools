@@ -130,6 +130,8 @@ function initMap() {
         marker.addListener('mouseout', mouseout);
       }
 
+      showListings();  // Display listings automatically on startup
+
       function populateThisWindow() {
         populateInfoWindow(this, largeInfowindow);
       }
@@ -226,6 +228,8 @@ function initMap() {
       }
       // Apply KnockOutJS
       ko.applyBindings(new KnockOutJsVM());
+  }).fail(function(){
+    alert("Can't load locations. Check your internet connection");
   });
 
   // This autocomplete is for use in the search within time entry box.
