@@ -15,8 +15,8 @@ var yelpPhoneSearch = "https://api.yelp.com/v3/businesses/search/phone?phone=";
 var cors_anywhere_url = "https://cors-anywhere.herokuapp.com/";
 
 // Hide/Show right sidebar function
-function menuIcon(x) {
-    x.classList.toggle("change");
+function menuIcon() {
+    $("#menu_icon").toggleClass("change");
     menuIconState = document.getElementById("menu_icon").classList.contains("change");
     if (menuIconState) { // True or False?
       document.getElementById("right_sidebar").style.height = "100%"; // if True
@@ -228,7 +228,7 @@ function initMap() {
       }
       // Apply KnockOutJS
       ko.applyBindings(new KnockOutJsVM());
-  }).fail(function(){
+  }).fail(function(){  // Error handling for getJSON('/locations.json')
     alert("Can't load locations. Check your internet connection");
   });
 
