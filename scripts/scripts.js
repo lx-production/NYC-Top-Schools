@@ -157,10 +157,11 @@ function initMap() {
           });
           var streetViewService = new google.maps.StreetViewService();
           var radius = 50;
+
           // In case the status is OK, which means the pano was found, compute the
           // position of the streetview image, then calculate the heading, then get a
           // panorama from that and set the options
-          function getStreetView(data, status) {  // error Function declarations should not be placed in blocks. Use a function expression or move the statement to the top of the outer function.
+          var streetView = function getStreetView(data, status) {
             if (status == google.maps.StreetViewStatus.OK) {
               var nearStreetViewLocation = data.location.latLng;
               var heading = google.maps.geometry.spherical.computeHeading(
@@ -182,10 +183,10 @@ function initMap() {
               infowindow.setContent('<div>' + marker.title + '</div>' +
                 '<div>No Street View Found</div>');
             }
-          }
+          };
           // Use streetview service to get the closest streetview image within
           // 50 meters of the markers position
-          streetViewService.getPanoramaByLocation(marker.position, radius, getStreetView);
+          streetViewService.getPanoramaByLocation(marker.position, radius, streetView);
           // Open the infowindow on the correct marker.
           infowindow.open(map, marker);
         }
