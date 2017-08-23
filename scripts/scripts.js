@@ -213,7 +213,7 @@ function initMap() {
       }
 
       // Using KnockOutJS for filtering function
-      function KnockOutJsVM() {
+      function FunctionsVM() {
         var self = this;
         self.locations = ko.observableArray(value);
         self.filter = ko.observable('');
@@ -245,10 +245,23 @@ function initMap() {
           }
           populateInfoWindow(clicked.marker, largeInfowindow);
         };
+
+        self.showSchools = function(){
+          var bounds = new google.maps.LatLngBounds();
+          // Extend the boundaries of the map for each marker and display the marker
+          for (var i = 0; i < markers.length; i++) {
+            markers[i].setMap(map);
+            bounds.extend(markers[i].position);
+          }
+
+          google.maps.event.addDomListener(window, 'resize', function() {
+            map.fitBounds(bounds);
+          });  // map markers always fit on screen as user resizes their browser window
+        };
       }
       // Apply KnockOutJS
-      ko.applyBindings(new KnockOutJsVM());
-  })
+      ko.applyBindings(new FunctionsVM());
+  });
 
   // This autocomplete is for use in the search within time entry box.
   var timeAutocomplete = new google.maps.places.Autocomplete(
@@ -287,7 +300,7 @@ function initMap() {
   // mouses over the marker.
   var highlightedIcon = makeMarkerIcon('0275d8');
 
-  $('#show-listings').click(showListings);
+  //$('#show-listings').click(showListings);
   $('#hide-listings').click(function(){hideMarkers(markers);});
   $('#toggle-drawing').click(function(){toggleDrawing(drawingManager);});
   $('#zoom-to-area').click(zoomToArea);
