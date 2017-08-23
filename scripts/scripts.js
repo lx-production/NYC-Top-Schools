@@ -147,18 +147,22 @@ function initMap() {
         this.setIcon(defaultIcon);
       }
 
+      function stopBounce(marker){
+        setTimeout(function(){
+          marker.setAnimation(null);
+        }, 1000);
+      }
+
       function animateMarker(marker) {
           marker.setAnimation(google.maps.Animation.BOUNCE);
-          setTimeout(function() {
-              marker.setAnimation(null);
-          }, 1000);
       }
 
       // This function populates the infowindow when the marker is clicked. We'll only allow
       // one infowindow which will open at the marker that is clicked, and populate based
       // on that markers position.
       function populateInfoWindow(marker, infowindow) {
-        animateMarker(marker);
+        animateMarker(marker); // Bounce markers for 1 second when clicked
+        stopBounce(marker);
         // Check to make sure the infowindow is not already opened on this marker.
         if (infowindow.marker != marker) {
           // Clear the infowindow content to give the streetview time to load.
@@ -175,14 +179,14 @@ function initMap() {
           // position of the streetview image, then calculate the heading, then get a
           // panorama from that and set the options
           var streetView = function getStreetView(data, status) {
+            var info = '<div>' + marker.title +
+              '</div><div><a target="_blank" href="' + marker.url + '">Yelp Rating: ' +
+              marker.rating + '</a></div><div id="pano"></div>';
             if (status == google.maps.StreetViewStatus.OK) {
               var nearStreetViewLocation = data.location.latLng;
               var heading = google.maps.geometry.spherical.computeHeading(
                 nearStreetViewLocation, marker.position);
-              var content = '<div>' + marker.title +
-                '</div><div><a target="_blank" href="' + marker.url + '">Yelp Rating: ' +
-                marker.rating + '</a></div><div id="pano"></div>';
-              infowindow.setContent(content);
+              infowindow.setContent(info);
               var panoramaOptions = {
                 position: nearStreetViewLocation,
                 pov: {
@@ -194,7 +198,8 @@ function initMap() {
                 document.getElementById('pano'), panoramaOptions);
             } else {
               infowindow.setContent('<div>' + marker.title + '</div>' +
-                '<div>No Street View Found</div>');
+                '<div>No Street View Found</div><a target="_blank" href="' +
+                marker.url + '">Yelp Rating: ' + marker.rating + '</a>');
             }
           };
           // Use streetview service to get the closest streetview image within
@@ -234,6 +239,7 @@ function initMap() {
             clicked.marker.setAnimation(null);
           } else {
             clicked.marker.setAnimation(google.maps.Animation.BOUNCE);
+            stopBounce(clicked.marker);
           }
         };
       }
