@@ -63,26 +63,46 @@ function makeMarkerIcon(markerColor) {
   return markerImage;
 }
 
-// This function will loop through the markers array and display them all.
-function showListings() {
-  var bounds = new google.maps.LatLngBounds();
-  // Extend the boundaries of the map for each marker and display the marker
-  for (var i = 0; i < markers.length; i++) {
-    markers[i].setMap(map);
-    bounds.extend(markers[i].position);
-  }
 
-  google.maps.event.addDomListener(window, 'resize', function() {
-    map.fitBounds(bounds);
-  });  // map markers always fit on screen as user resizes their browser window
+function showListings() {
+    var bounds = new google.maps.LatLngBounds();
+    // Extend the boundaries of the map for each marker and display the marker
+    for (var i = 0; i < markers.length; i++) {
+      markers[i].setMap(map);
+      bounds.extend(markers[i].position);
+    }
+    google.maps.event.addDomListener(window, 'resize', function() {
+      map.fitBounds(bounds);
+    });  // map markers always fit on screen as user resizes their browser window
 }
+
+function hideMarkers(markers) {
+    for (var i = 0; i < markers.length; i++) {
+      markers[i].setMap(null);
+    }
+}
+
+
+// This function will loop through the markers array and display them all.
+// function showListings() {
+//   var bounds = new google.maps.LatLngBounds();
+//   // Extend the boundaries of the map for each marker and display the marker
+//   for (var i = 0; i < markers.length; i++) {
+//     markers[i].setMap(map);
+//     bounds.extend(markers[i].position);
+//   }
+//
+//   google.maps.event.addDomListener(window, 'resize', function() {
+//     map.fitBounds(bounds);
+//   });  // map markers always fit on screen as user resizes their browser window
+// }
 
 // This function will loop through the listings and hide them all.
-function hideMarkers(markers) {
-  for (var i = 0; i < markers.length; i++) {
-    markers[i].setMap(null);
-  }
-}
+// function hideMarkers(markers) {
+//   for (var i = 0; i < markers.length; i++) {
+//     markers[i].setMap(null);
+//   }
+// }
 
 function initMap() {
   // Constructor creates a new map - only center and zoom are required.
@@ -246,18 +266,8 @@ function initMap() {
           populateInfoWindow(clicked.marker, largeInfowindow);
         };
 
-        self.showSchools = function(){
-          var bounds = new google.maps.LatLngBounds();
-          // Extend the boundaries of the map for each marker and display the marker
-          for (var i = 0; i < markers.length; i++) {
-            markers[i].setMap(map);
-            bounds.extend(markers[i].position);
-          }
-
-          google.maps.event.addDomListener(window, 'resize', function() {
-            map.fitBounds(bounds);
-          });  // map markers always fit on screen as user resizes their browser window
-        };
+        self.showSchools = function(){showListings();};
+        self.hideSchools = function(){hideMarkers(markers);};
       }
       // Apply KnockOutJS
       ko.applyBindings(new FunctionsVM());
@@ -300,8 +310,7 @@ function initMap() {
   // mouses over the marker.
   var highlightedIcon = makeMarkerIcon('0275d8');
 
-  //$('#show-listings').click(showListings);
-  $('#hide-listings').click(function(){hideMarkers(markers);});
+
   $('#toggle-drawing').click(function(){toggleDrawing(drawingManager);});
   $('#zoom-to-area').click(zoomToArea);
   $('#search-within-time').click(function(){searchWithinTime();});
