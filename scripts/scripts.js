@@ -147,14 +147,14 @@ function initMap() {
         this.setIcon(defaultIcon);
       }
 
+      function animateMarker(marker) {
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+      }
+
       function stopBounce(marker){
         setTimeout(function(){
           marker.setAnimation(null);
         }, 1000);
-      }
-
-      function animateMarker(marker) {
-          marker.setAnimation(google.maps.Animation.BOUNCE);
       }
 
       // This function populates the infowindow when the marker is clicked. We'll only allow
@@ -241,6 +241,7 @@ function initMap() {
             clicked.marker.setAnimation(google.maps.Animation.BOUNCE);
             stopBounce(clicked.marker);
           }
+          populateInfoWindow(clicked.marker, largeInfowindow);
         };
       }
       // Apply KnockOutJS
