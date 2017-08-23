@@ -93,7 +93,9 @@ function initMap() {
   });
 
   // Getting schools' names and lat, long coordinates from Google's JSONs
-  $.getJSON('/locations.json').then(data =>  // data is the result of getJSON
+  $.getJSON('/locations.json').fail(function(){  // Error handling
+    alert("Can't load locations. Check your internet connection");
+  }).then(data =>  // data is the result of getJSON
       Promise.all(data.map(school =>   //  map() method creates a new array with the results of calling a provided function on every element in the calling array
           $.ajax({  // ajax is asynchrorous by default
               "url": cors_anywhere_url + yelpPhoneSearch + school.phone,
@@ -102,6 +104,8 @@ function initMap() {
                   "authorization": "Bearer " + yelpToken.access_token,
                   "cache-control": "public, max-age=31536000",
               }
+          }).fail(function(){
+            alert("Can't fetch data from Yelp. Check your internet connection");
           }).then(response => ({ // response is the result of the ajax call above
               title: school.title,
               location: school.location,
@@ -109,9 +113,7 @@ function initMap() {
               rating: response.businesses[0].rating,
               url: response.businesses[0].url
           }))
-          .fail(function(){
-            alert("Can't fetch data from Yelp. Check your internet connection");
-          })
+
       ))
   ).then(function(value) {  // What to do with value after getJSON, ajax call, and mapping the ajax response
       // value is the array returned from the above codes, and is used to create markers below
@@ -246,9 +248,7 @@ function initMap() {
       }
       // Apply KnockOutJS
       ko.applyBindings(new KnockOutJsVM());
-  }).fail(function(){  // Error handling for getJSON('/locations.json')
-    alert("Can't load locations. Check your internet connection");
-  });
+  })
 
   // This autocomplete is for use in the search within time entry box.
   var timeAutocomplete = new google.maps.places.Autocomplete(
