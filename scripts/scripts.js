@@ -268,6 +268,10 @@ function initMap() {
 
         self.showSchools = function(){showListings();};
         self.hideSchools = function(){hideMarkers(markers);};
+        self.draw = function(){toggleDrawing(drawingManager);};
+        self.zoom = function(){zoomToArea();};
+        self.timeSearch = function(){searchWithinTime();};
+        self.goPlaces = function(){textSearchPlaces();};
       }
       // Apply KnockOutJS
       ko.applyBindings(new FunctionsVM());
@@ -311,10 +315,10 @@ function initMap() {
   var highlightedIcon = makeMarkerIcon('0275d8');
 
 
-  $('#toggle-drawing').click(function(){toggleDrawing(drawingManager);});
-  $('#zoom-to-area').click(zoomToArea);
-  $('#search-within-time').click(function(){searchWithinTime();});
-  $('#go-places').click(textSearchPlaces);
+  //$('#toggle-drawing').click(function(){toggleDrawing(drawingManager);});
+  //$('#zoom-to-area').click(zoomToArea);
+  //$('#search-within-time').click(function(){searchWithinTime();});
+  //$('#go-places').click(textSearchPlaces);
 
   // Adding search-upon-enter for zoom-to-area-text field
   $('#zoom-to-area-text').keypress(function(e){
