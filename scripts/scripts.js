@@ -63,46 +63,26 @@ function makeMarkerIcon(markerColor) {
   return markerImage;
 }
 
-
-function showListings() {
-    var bounds = new google.maps.LatLngBounds();
-    // Extend the boundaries of the map for each marker and display the marker
-    for (var i = 0; i < markers.length; i++) {
-      markers[i].setMap(map);
-      bounds.extend(markers[i].position);
-    }
-    google.maps.event.addDomListener(window, 'resize', function() {
-      map.fitBounds(bounds);
-    });  // map markers always fit on screen as user resizes their browser window
-}
-
-function hideMarkers(markers) {
-    for (var i = 0; i < markers.length; i++) {
-      markers[i].setMap(null);
-    }
-}
-
-
 // This function will loop through the markers array and display them all.
-// function showListings() {
-//   var bounds = new google.maps.LatLngBounds();
-//   // Extend the boundaries of the map for each marker and display the marker
-//   for (var i = 0; i < markers.length; i++) {
-//     markers[i].setMap(map);
-//     bounds.extend(markers[i].position);
-//   }
-//
-//   google.maps.event.addDomListener(window, 'resize', function() {
-//     map.fitBounds(bounds);
-//   });  // map markers always fit on screen as user resizes their browser window
-// }
+function showListings() {
+  var bounds = new google.maps.LatLngBounds();
+  // Extend the boundaries of the map for each marker and display the marker
+  for (var i = 0; i < markers.length; i++) {
+    markers[i].setMap(map);
+    bounds.extend(markers[i].position);
+  }
+
+  google.maps.event.addDomListener(window, 'resize', function() {
+    map.fitBounds(bounds);
+  });  // map markers always fit on screen as user resizes their browser window
+}
 
 // This function will loop through the listings and hide them all.
-// function hideMarkers(markers) {
-//   for (var i = 0; i < markers.length; i++) {
-//     markers[i].setMap(null);
-//   }
-// }
+function hideMarkers(markers) {
+  for (var i = 0; i < markers.length; i++) {
+    markers[i].setMap(null);
+  }
+}
 
 function initMap() {
   // Constructor creates a new map - only center and zoom are required.
@@ -111,6 +91,8 @@ function initMap() {
     zoom: 13,
     mapTypeControl: true
   });
+
+  var largeInfowindow = new google.maps.InfoWindow();
 
   // Getting schools' names and lat, long coordinates from Google's JSONs
   $.getJSON('/locations.json').fail(function(){  // Error handling
@@ -269,9 +251,10 @@ function initMap() {
         self.showSchools = function(){showListings();};
         self.hideSchools = function(){hideMarkers(markers);};
         self.draw = function(){toggleDrawing(drawingManager);};
-        self.zoom = function(){zoomToArea();};
+        //self.zoom = function(){zoomToArea();};
         self.timeSearch = function(){searchWithinTime();};
         self.goPlaces = function(){textSearchPlaces();};
+
       }
       // Apply KnockOutJS
       ko.applyBindings(new FunctionsVM());
@@ -280,20 +263,20 @@ function initMap() {
   // This autocomplete is for use in the search within time entry box.
   var timeAutocomplete = new google.maps.places.Autocomplete(
       document.getElementById('search-within-time-text'));
-  // This autocomplete is for use in the geocoder entry box.
-  var zoomAutocomplete = new google.maps.places.Autocomplete(
-      document.getElementById('zoom-to-area-text'));
-      // Create a searchbox in order to execute nearby places search
+  // Create a searchbox in order to execute nearby places search
   var searchBox = new google.maps.places.SearchBox(
       document.getElementById('places-search'));
 
   // Bias the boundaries within the map for the zoom to area text
   // and search within time and searchBox
-  zoomAutocomplete.bindTo('bounds', map);
   timeAutocomplete.bindTo('bounds', map);
   searchBox.bindTo('bounds', map);
 
-  var largeInfowindow = new google.maps.InfoWindow();
+  // Listen for the event fired when the user selects a prediction from the
+  // picklist and retrieve more details for that place.
+  searchBox.addListener('places_changed', function() {
+    searchBoxPlaces(this);
+  });
 
   // Initialize the drawing manager.
   var drawingManager = new google.maps.drawing.DrawingManager({
@@ -313,32 +296,6 @@ function initMap() {
   // Create a "highlighted location" marker color for when the user
   // mouses over the marker.
   var highlightedIcon = makeMarkerIcon('0275d8');
-
-
-  //$('#toggle-drawing').click(function(){toggleDrawing(drawingManager);});
-  //$('#zoom-to-area').click(zoomToArea);
-  //$('#search-within-time').click(function(){searchWithinTime();});
-  //$('#go-places').click(textSearchPlaces);
-
-  // Adding search-upon-enter for zoom-to-area-text field
-  $('#zoom-to-area-text').keypress(function(e){
-        if(e.which == 13){  // Enter key pressed
-            $('#zoom-to-area').click();  // Trigger search button click event
-        }
-    });
-
-  // Adding search-upon-enter for search-within-time-text field
-  $('#search-within-time-text').keypress(function(e){
-        if(e.which == 13){  // Enter key pressed
-            $('#search-within-time').click();
-        }
-    });
-
-  // Listen for the event fired when the user selects a prediction from the
-  // picklist and retrieve more details for that place.
-  searchBox.addListener('places_changed', function() {
-    searchBoxPlaces(this);
-  });
 
   // Add an event listener so that the polygon is captured,  call the
   // searchWithinPolygon function. This will show the markers in the polygon,
@@ -388,37 +345,6 @@ function searchWithinPolygon() {
     }
   }
 }
-
-// This function takes the input value in the find nearby area text input
-// locates it, and then zooms into that area. This is so that the user can
-// show all listings, then decide to focus on one area of the map.
-function zoomToArea() {
-  // Initialize the geocoder.
-  var geocoder = new google.maps.Geocoder();
-
-  // Get the address or place that the user entered.
-  var address = document.getElementById('zoom-to-area-text').value;
-
-  // Make sure the address isn't blank.
-  if (address === '') {
-    window.alert('You must enter an area, or address.');
-  } else {
-    // Geocode the address/area entered to get the center. Then, center the map
-    // on it and zoom in
-    geocoder.geocode(
-      { address: address,
-        componentRestrictions: {locality: 'New York'}
-      }, function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-          map.setCenter(results[0].geometry.location);
-          map.setZoom(18);
-        } else {
-          window.alert('We could not find that location - try entering a more' +
-              ' specific place.');
-        }
-      });
-    }
-  }
 
 // This function allows the user to input a desired travel time, in
 // minutes, and a travel mode, and a location - and only show the listings
