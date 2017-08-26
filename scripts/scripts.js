@@ -79,10 +79,10 @@ function showListings() {
 
 // This function will loop through the listings and hide them all.
 function hideMarkers(markers) {
-    for (var i = 0; i < markers.length; i++) {
-      markers[i].setMap(null);
-    }
+  for (var i = 0; i < markers.length; i++) {
+    markers[i].setMap(null);
   }
+}
 
 function initMap() {
   // Constructor creates a new map - only center and zoom are required.
@@ -158,14 +158,14 @@ function initMap() {
       function stopBounce(marker){
         setTimeout(function(){
           marker.setAnimation(null);
-        }, 1450);  // perfect double bounce
+        }, 1000);
       }
 
       // This function populates the infowindow when the marker is clicked. We'll only allow
       // one infowindow which will open at the marker that is clicked, and populate based
       // on that markers position.
       function populateInfoWindow(marker, infowindow) {
-        animateMarker(marker); // Bounce markers
+        animateMarker(marker); // Bounce markers for 1 second when clicked
         stopBounce(marker);
         // Check to make sure the infowindow is not already opened on this marker.
         if (infowindow.marker != marker) {
@@ -247,34 +247,13 @@ function initMap() {
           }
           populateInfoWindow(clicked.marker, largeInfowindow);
         };
+
         self.showSchools = function(){showListings();};
         self.hideSchools = function(){hideMarkers(markers);};
         self.draw = function(){toggleDrawing(drawingManager);};
+        //self.zoom = function(){zoomToArea();};
         self.timeSearch = function(){searchWithinTime();};
-        self.placeSearch = ko.observable('');
-
-        self.goPlaces = ko.computed(function textSearchPlaces() {
-          var bounds = map.getBounds();
-          hideMarkers(placeMarkers);
-          var placesService = new google.maps.places.PlacesService(map);
-          // Get the address or place that the user entered.
-          var search = placeSearch;
-          // Make sure the search isn't blank.
-          if (search === '') {
-            window.alert('You must enter something to be searched');
-          } else {
-            placesService.textSearch({
-              query: placeSearch,
-              bounds: bounds
-            }, function(results, status) {
-              if (status === google.maps.places.PlacesServiceStatus.OK) {
-                createMarkersForPlaces(results);
-              }
-            });
-          }
-        }, self);
-
-
+        self.goPlaces = function(){textSearchPlaces();};
 
       }
       // Apply KnockOutJS
@@ -503,26 +482,26 @@ function searchBoxPlaces(searchBox) {
 
 // This function firest when the user select "go" on the places search.
 // It will do a nearby search using the entered query string or place.
-// function textSearchPlaces() {
-//   var bounds = map.getBounds();
-//   hideMarkers(placeMarkers);
-//   var placesService = new google.maps.places.PlacesService(map);
-//   // Get the address or place that the user entered.
-//   var search = document.getElementById('places-search').value;
-//   // Make sure the search isn't blank.
-//   if (search === '') {
-//     window.alert('You must enter something to be searched');
-//   } else {
-//     placesService.textSearch({
-//       query: document.getElementById('places-search').value,
-//       bounds: bounds
-//     }, function(results, status) {
-//       if (status === google.maps.places.PlacesServiceStatus.OK) {
-//         createMarkersForPlaces(results);
-//       }
-//     });
-//   }
-// }
+function textSearchPlaces() {
+  var bounds = map.getBounds();
+  hideMarkers(placeMarkers);
+  var placesService = new google.maps.places.PlacesService(map);
+  // Get the address or place that the user entered.
+  var search = document.getElementById('places-search').value;
+  // Make sure the search isn't blank.
+  if (search === '') {
+    window.alert('You must enter something to be searched');
+  } else {
+    placesService.textSearch({
+      query: document.getElementById('places-search').value,
+      bounds: bounds
+    }, function(results, status) {
+      if (status === google.maps.places.PlacesServiceStatus.OK) {
+        createMarkersForPlaces(results);
+      }
+    });
+  }
+}
 
 // This function creates markers for each place found in either places search.
 function createMarkersForPlaces(places) {
