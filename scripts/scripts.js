@@ -251,14 +251,32 @@ function initMap() {
         self.showSchools = function(){showListings();};
         self.hideSchools = function(){hideMarkers(markers);};
         self.draw = function(){toggleDrawing(drawingManager);};
-        //self.zoom = function(){zoomToArea();};
         self.timeSearch = function(){searchWithinTime();};
-        self.goPlaces = function(){textSearchPlaces();};
 
-      }
-      // Apply KnockOutJS
-      ko.applyBindings(new FunctionsVM());
-  });
+        self.placeSearch = ko.observable('');
+        self.goPlaces = function() {
+          var bounds = map.getBounds();
+          hideMarkers(placeMarkers);
+          var placesService = new google.maps.places.PlacesService(map);
+          // Get the address or place that the user entered.
+          var search = self.placeSearch();
+          // Make sure the search isn't blank.
+          if (search === '') {
+            window.alert('You must enter something to be searched');
+          } else {
+            placesService.textSearch({
+              query: self.placeSearch(),
+              bounds: bounds
+            }, function(results, status) {
+              if (status === google.maps.places.PlacesServiceStatus.OK) {
+                createMarkersForPlaces(results);
+              }
+            });
+          }
+        }; // Close goPlaces
+      }  // Close FunctionsVM()
+      ko.applyBindings(new FunctionsVM());  // Apply KnockOutJS
+  }); // Close then(function(value) line #120
 
   // This autocomplete is for use in the search within time entry box.
   var timeAutocomplete = new google.maps.places.Autocomplete(
@@ -482,26 +500,26 @@ function searchBoxPlaces(searchBox) {
 
 // This function firest when the user select "go" on the places search.
 // It will do a nearby search using the entered query string or place.
-function textSearchPlaces() {
-  var bounds = map.getBounds();
-  hideMarkers(placeMarkers);
-  var placesService = new google.maps.places.PlacesService(map);
-  // Get the address or place that the user entered.
-  var search = document.getElementById('places-search').value;
-  // Make sure the search isn't blank.
-  if (search === '') {
-    window.alert('You must enter something to be searched');
-  } else {
-    placesService.textSearch({
-      query: document.getElementById('places-search').value,
-      bounds: bounds
-    }, function(results, status) {
-      if (status === google.maps.places.PlacesServiceStatus.OK) {
-        createMarkersForPlaces(results);
-      }
-    });
-  }
-}
+// function textSearchPlaces() {
+//   var bounds = map.getBounds();
+//   hideMarkers(placeMarkers);
+//   var placesService = new google.maps.places.PlacesService(map);
+//   // Get the address or place that the user entered.
+//   var search = document.getElementById('places-search').value;
+//   // Make sure the search isn't blank.
+//   if (search === '') {
+//     window.alert('You must enter something to be searched');
+//   } else {
+//     placesService.textSearch({
+//       query: document.getElementById('places-search').value,
+//       bounds: bounds
+//     }, function(results, status) {
+//       if (status === google.maps.places.PlacesServiceStatus.OK) {
+//         createMarkersForPlaces(results);
+//       }
+//     });
+//   }
+// }
 
 // This function creates markers for each place found in either places search.
 function createMarkersForPlaces(places) {

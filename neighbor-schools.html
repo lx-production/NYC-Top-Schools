@@ -62,7 +62,7 @@
         <br>
         <div>
           <span class="text">Search for nearby places</span>
-          <input type="text" class="form-control" id="places-search" placeholder="Ex: Starbucks">
+          <input type="text" class="form-control" id="places-search" data-bind="textInput: placeSearch" placeholder="E.g. Starbucks">
           <button id="go-places" class="btn btn-primary mb0" data-bind="click: $root.goPlaces">Go</button>
         </div>
         <br>
@@ -75,11 +75,10 @@
     </div>
 
     <footer>
-      <script async src="https://code.jquery.com/jquery-3.2.1.min.js" onerror="scriptsLoadError()"></script>
-      <script async src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js" onerror="scriptsLoadError()"></script>
-
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" onerror="scriptsLoadError()"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js" onerror="scriptsLoadError()"></script>
+      <script src="/scripts/scripts.js"></script>
       <script async src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry,drawing&key=AIzaSyAGHLbKTx0QeaOW2bmQZLUIP1r9v_ROgC8&v=3&callback=initMap" onerror="scriptsLoadError()"></script>
-      <script defer src="/scripts/scripts.js"></script>
     </footer>
 
   </body>
