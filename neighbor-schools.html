@@ -36,30 +36,11 @@
           <button id="hide-listings" class="btn btn-primary show-hide" data-bind="click: $root.hideSchools">Hide Schools</button>
           <button id="toggle-drawing" class="btn btn-primary" data-bind="click: $root.draw">Draw an area to search for schools within</button>
         </div>
-        
-        <br>
-        <div>
-          <p class="text">Direction within </p>
-          <select id="max-duration" class="custom-select">
-            <option selected value="10">10 min</option>
-            <option value="15">15 min</option>
-            <option value="30">30 min</option>
-            <option value="60">1 hour</option>
-          </select>
-          <select id="mode" class="custom-select">
-            <option selected value="DRIVING">drive</option>
-            <option value="WALKING">walk</option>
-            <option value="BICYCLING">bike</option>
-            <option value="TRANSIT">transit ride</option>
-          </select>
-          <span class="text"> of</span>
-          <input type="text" class="form-control" id="search-within-time-text" placeholder="Type or paste your address here">
-          <button id="search-within-time" class="btn btn-primary mb0" data-bind="click: $root.timeSearch">Go</button>
-        </div>
+
         <br>
         <div>
           <span class="text">Search for nearby places</span>
-          <input type="text" class="form-control" id="places-search" placeholder="Ex: Starbucks">
+          <input type="text" class="form-control" id="places-search" data-bind="textInput: placeSearch" placeholder="E.g. Starbucks">
           <button id="go-places" class="btn btn-primary mb0" data-bind="click: $root.goPlaces">Go</button>
         </div>
         <br>
@@ -72,11 +53,10 @@
     </div>
 
     <footer>
-      <script async src="https://code.jquery.com/jquery-3.2.1.min.js" onerror="scriptsLoadError()"></script>
-      <script async src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js" onerror="scriptsLoadError()"></script>
-
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" onerror="scriptsLoadError()"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js" onerror="scriptsLoadError()"></script>
+      <script src="/scripts/scripts.js"></script>
       <script async src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry,drawing&key=AIzaSyAGHLbKTx0QeaOW2bmQZLUIP1r9v_ROgC8&v=3&callback=initMap" onerror="scriptsLoadError()"></script>
-      <script defer src="/scripts/scripts.js"></script>
     </footer>
 
   </body>
