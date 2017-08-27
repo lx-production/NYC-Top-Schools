@@ -1,4 +1,26 @@
 [
-  
+  {"title":"Manhattan Nursery School[Elementary]","location":{"lat":40.7477712,"lng":-73.9874152}, "phone": "+12126310543"},
+  {"title":"Church of Saint Luke in the Fields[Elementary]","location":{"lat":40.732586,"lng":-74.006704}, "phone": "+12129240562"},
+  {"title":"Viaquenti Academy[Elementary]","location":{"lat":40.734756,"lng":-74.044763}, "phone": "+12012220033"},
+  {"title":"Buckle My Shoe[Elementary]","location":{"lat":40.717164,"lng":-74.007038}, "phone": "+12123741489"},
+  {"title":"Manhattan Youth Downtown Community Center[Elementary]","location":{"lat":40.716365,"lng":-74.012350}, "phone": "+12127661104"},
+  {"title":"Children’s International Workshop[Elementary]","location":{"lat":40.736986,"lng":-73.991442}, "phone": "+12126918964"},
+  {"title":"Our Lady of Pompeii School[Middle]","location":{"lat":40.730771,"lng":-74.002847}, "phone": "+12122424147"},
+  {"title":"Corlears School[Middle]","location":{"lat":40.740812,"lng":-74.003119}, "phone": "+12127412800"},
+  {"title":"Ecole Internationale De New York[Middle]","location":{"lat":40.739414,"lng":-73.986070}, "phone": "+16464102238"},
+  {"title":"Friends Seminary[Middle]","location":{"lat":40.734019,"lng":-73.985069}, "phone": "+12129795030"},
+  {"title":"United Nations International School[Middle]","location":{"lat":40.736358,"lng":-73.973541}, "phone": "+12126847400"},
+  {"title":"The Churchill School & Center [Middle]","location":{"lat":40.741575,"lng":-73.977468}, "phone": "+12126965467"},
+  {"title":"Trilok School [High school]","location":{"lat":40.693811,"lng":-73.967633}, "phone": "+17185762563"},
+  {"title":"Stuyvesant [High School]","location":{"lat":40.714824,"lng":-74.03819899999999}, "phone": "+12123124800"},
+  {"title":"Togei Kyoshitsu [Highs chool]","location":{"lat":40.746383,"lng":-73.986938}, "phone": "+12122681711"},
+  {"title":"Queens Paideia School [High school]","location":{"lat":40.748945,"lng":-73.944578}, "phone": "+17183610070"},
+  {"title":"School of the Blessed Sacrament[High school]","location":{"lat":40.776979,"lng":-73.981257}, "phone": "+12127247561"},
+  {"title":"The Chapin School [High school]","location":{"lat":40.773998,"lng":-73.946084}, "phone": "+12127442335"},
+  {"title":"Columbia [University]","location":{"lat":40.78553969999999,"lng":-73.9536897}, "phone": "+12128541200"},
+  {"title":"New York [University]","location":{"lat":40.74849139999999,"lng":-73.946552}, "phone": "+12129984500"},
+  {"title":"Barnard College - Columbia [University]","location":{"lat":40.809097,"lng":-73.963963}, "phone": "+12128545262"},
+  {"title":"American Academy of Dramatic Arts [University]","location":{"lat":40.745440,"lng":-73.984822}, "phone": "+12126869244"},
+  {"title":"Cooper Union For the Advancement of Science & Art [University]","location":{"lat":40.728082,"lng":-73.991609}, "phone": "+12123534100"},
   {"title":"NYU Langone Medical Center and School of Medicine [University]","location":{"lat":40.745038,"lng":-73.979985}, "phone": "+12122632022"}
 ]

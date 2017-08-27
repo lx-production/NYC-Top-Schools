@@ -158,7 +158,7 @@ function initMap() {
       function stopBounce(marker){
         setTimeout(function(){
           marker.setAnimation(null);
-        }, 1000);
+        }, 1450);  // Double bounce
       }
 
       // This function populates the infowindow when the marker is clicked. We'll only allow
@@ -251,17 +251,14 @@ function initMap() {
         self.showSchools = function(){showListings();};
         self.hideSchools = function(){hideMarkers(markers);};
         self.draw = function(){toggleDrawing(drawingManager);};
-        self.timeSearch = function(){searchWithinTime();};
 
         self.placeSearch = ko.observable('');
         self.goPlaces = function() {
           var bounds = map.getBounds();
           hideMarkers(placeMarkers);
           var placesService = new google.maps.places.PlacesService(map);
-          // Get the address or place that the user entered.
           var search = self.placeSearch();
-          // Make sure the search isn't blank.
-          if (search === '') {
+          if (search === '') {  // Make sure the search isn't blank.
             window.alert('You must enter something to be searched');
           } else {
             placesService.textSearch({
@@ -278,16 +275,11 @@ function initMap() {
       ko.applyBindings(new FunctionsVM());  // Apply KnockOutJS
   }); // Close then(function(value) line #120
 
-  // This autocomplete is for use in the search within time entry box.
-  var timeAutocomplete = new google.maps.places.Autocomplete(
-      document.getElementById('search-within-time-text'));
   // Create a searchbox in order to execute nearby places search
   var searchBox = new google.maps.places.SearchBox(
       document.getElementById('places-search'));
 
-  // Bias the boundaries within the map for the zoom to area text
-  // and search within time and searchBox
-  timeAutocomplete.bindTo('bounds', map);
+  // Bias the boundaries within the map for the zoom to area text and search within time and searchBox
   searchBox.bindTo('bounds', map);
 
   // Listen for the event fired when the user selects a prediction from the
@@ -295,6 +287,13 @@ function initMap() {
   searchBox.addListener('places_changed', function() {
     searchBoxPlaces(this);
   });
+
+  // Style the markers a bit. This will be our listing marker icon.
+  var defaultIcon = makeMarkerIcon('ff6666');
+
+  // Create a "highlighted location" marker color for when the user
+  // mouses over the marker.
+  var highlightedIcon = makeMarkerIcon('0275d8');
 
   // Initialize the drawing manager.
   var drawingManager = new google.maps.drawing.DrawingManager({
@@ -307,13 +306,6 @@ function initMap() {
       ]
     }
   });
-
-  // Style the markers a bit. This will be our listing marker icon.
-  var defaultIcon = makeMarkerIcon('ff6666');
-
-  // Create a "highlighted location" marker color for when the user
-  // mouses over the marker.
-  var highlightedIcon = makeMarkerIcon('0275d8');
 
   // Add an event listener so that the polygon is captured,  call the
   // searchWithinPolygon function. This will show the markers in the polygon,
@@ -364,127 +356,6 @@ function searchWithinPolygon() {
   }
 }
 
-// This function allows the user to input a desired travel time, in
-// minutes, and a travel mode, and a location - and only show the listings
-// that are within that travel time (via that travel mode) of the location
-function searchWithinTime() {
-  // Initialize the distance matrix service.
-  var distanceMatrixService = new google.maps.DistanceMatrixService();
-  var address = document.getElementById('search-within-time-text').value;
-  // Check to make sure the place entered isn't blank.
-  if (address === '') {
-    window.alert('You must enter an address.');
-  } else {
-    hideMarkers(markers);
-    // Use the distance matrix service to calculate the duration of the
-    // routes between all our markers, and the destination address entered
-    // by the user. Then put all the origins into an origin matrix.
-    var origins = [];
-    for (var i = 0; i < markers.length; i++) {
-      origins[i] = markers[i].position;
-    }
-    var destination = address;
-    var mode = document.getElementById('mode').value;
-    // Now that both the origins and destination are defined, get all the
-    // info for the distances between them.
-    distanceMatrixService.getDistanceMatrix({
-      origins: origins,
-      destinations: [destination],
-      travelMode: google.maps.TravelMode[mode],
-      unitSystem: google.maps.UnitSystem.IMPERIAL,
-    }, function(response, status) {
-      if (status !== google.maps.DistanceMatrixStatus.OK) {
-        window.alert('Error was: ' + status);
-      } else {
-        displayMarkersWithinTime(response);
-      }
-    });
-  }
-}
-
-// This function will go through each of the results, and,
-// if the distance is LESS than the value in the picker, show it on the map.
-function displayMarkersWithinTime(response) {
-  var maxDuration = document.getElementById('max-duration').value;
-  var origins = response.originAddresses;
-  var destinations = response.destinationAddresses;
-  // Parse through the results, and get the distance and duration of each.
-  // Because there might be  multiple origins and destinations we have a nested loop
-  // Then, make sure at least 1 result was found.
-  var atLeastOne = false;
-  for (var i = 0; i < origins.length; i++) {
-    var results = response.rows[i].elements;
-    for (var j = 0; j < results.length; j++) {
-      var element = results[j];
-      if (element.status === "OK") {
-        // The distance is returned in feet, but the TEXT is in miles. If we wanted to switch
-        // the function to show markers within a user-entered DISTANCE, we would need the
-        // value for distance, but for now we only need the text.
-        var distanceText = element.distance.text;
-        // Duration value is given in seconds so we make it MINUTES. We need both the value
-        // and the text.
-        var duration = element.duration.value / 60;
-        var durationText = element.duration.text;
-        if (duration <= maxDuration) {
-          //the origin [i] should = the markers[i]
-          markers[i].setMap(map);
-          atLeastOne = true;
-          // Create a mini infowindow to open immediately and contain the
-          // distance and duration
-          var infowindow = new google.maps.InfoWindow({
-            content: durationText + ' away, ' + distanceText +
-              '<div><input type=\"button\" value=\"View Route\" onclick =' +
-              '\"displayDirections(&quot;' + origins[i] + '&quot;);\"></input></div>'
-          });
-          infowindow.open(map, markers[i]);
-          // Put this in so that this small window closes if the user clicks
-          // the marker, when the big infowindow opens
-          markers[i].infowindow = infowindow;
-          google.maps.event.addListener(markers[i], 'click', function() {
-            this.infowindow.close();
-          });
-        }
-      }
-    }
-  }
-  if (!atLeastOne) {
-    window.alert('We could not find any locations within that distance!');
-  }
-}
-
-// This function is in response to the user selecting "show route" on one
-// of the markers within the calculated distance. This will display the route
-// on the map.
-function displayDirections(origin) {
-  hideMarkers(markers);
-  var directionsService = new google.maps.DirectionsService();
-  // Get the destination address from the user entered value.
-  var destinationAddress =
-      document.getElementById('search-within-time-text').value;
-  // Get mode again from the user entered value.
-  var mode = document.getElementById('mode').value;
-  directionsService.route({
-    // The origin is the passed in marker's position.
-    origin: origin,
-    // The destination is user entered address.
-    destination: destinationAddress,
-    travelMode: google.maps.TravelMode[mode]
-  }, function(response, status) {
-    if (status === google.maps.DirectionsStatus.OK) {
-      var directionsDisplay = new google.maps.DirectionsRenderer({
-        map: map,
-        directions: response,
-        draggable: true,
-        polylineOptions: {
-          strokeColor: 'green'
-        }
-      });
-    } else {
-      window.alert('Directions request failed due to ' + status);
-    }
-  });
-}
-
 // This function fires when the user selects a searchbox picklist item.
 // It will do a nearby search using the selected query string or place.
 function searchBoxPlaces(searchBox) {
@@ -497,29 +368,6 @@ function searchBoxPlaces(searchBox) {
     createMarkersForPlaces(places);
   }
 }
-
-// This function firest when the user select "go" on the places search.
-// It will do a nearby search using the entered query string or place.
-// function textSearchPlaces() {
-//   var bounds = map.getBounds();
-//   hideMarkers(placeMarkers);
-//   var placesService = new google.maps.places.PlacesService(map);
-//   // Get the address or place that the user entered.
-//   var search = document.getElementById('places-search').value;
-//   // Make sure the search isn't blank.
-//   if (search === '') {
-//     window.alert('You must enter something to be searched');
-//   } else {
-//     placesService.textSearch({
-//       query: document.getElementById('places-search').value,
-//       bounds: bounds
-//     }, function(results, status) {
-//       if (status === google.maps.places.PlacesServiceStatus.OK) {
-//         createMarkersForPlaces(results);
-//       }
-//     });
-//   }
-// }
 
 // This function creates markers for each place found in either places search.
 function createMarkersForPlaces(places) {
